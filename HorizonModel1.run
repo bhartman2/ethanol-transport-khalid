@@ -1,0 +1,405 @@
+#script for running TimeModel
+
+load amplgsl.dll;
+function gsl_cdf_poisson_P;
+option solver cplex;
+option solver_msg 0;
+
+model EthanolTransportStageModel.mod;
+data EthanolTransportStageData.dat;
+
+model ETQ.mod;
+data ETQ.dat;
+
+#model TimeModel.mod ;
+#data TimeModel.dat ;
+
+problem Recourse: XL,XP,O,Q,N,Y,RCost,
+	notrains, mintrains, maxtrains, trainmin, trainmax, useallcars,
+	outsource, Lcars, Pcars
+	;
+
+problem Quarter: La, Pa, Sa, Lop, Pop, Sop, Qcost,
+	lcars, pcars, scars, slim, cars, totcars
+	; 
+	option relax_integrality 1;	
+	
+param seas {PDS} ;
+let seas[1] := .20 ; let seas[2] := .30 ; let seas[3] := .10 ;
+let seas[4] := .15 ; let seas[5] := .10 ; let seas[6] := .15 ;
+
+param Qcostold; let Qcostold := Infinity ;
+param Qcostmin; let Qcostmin := Infinity ;
+param Idlecostold ; let Idlecostold := Infinity ;
+param Outsourcecostold ; let Outsourcecostold := Infinity ;
+
+param Linit; param Pinit; param Sinit;
+let Linit := 69 ; let Pinit := 0 ; let Sinit := 5 ; #initial values
+param LPBound; param SBound; 
+param down; param up; param down2 ; param up2 ;
+
+let PDS := 1 .. 6 by 1;
+
+set HORIZON := { 1 .. 5 } ;
+set CARS := { "Leased", "Purchased", "Subleased_L", "Subleased_P" }  ;
+set CHANGES := { "nl", "np", "rl", "rp", "sl", "sp", "cl", "dp" } ;
+
+param nh <= card(HORIZON) ;
+param Forecast {HORIZON} ; #forecast
+param Majorcost {HORIZON} ; #cost of any change, one time
+param Minorcost {HORIZON, CARS} ; #cost of a change of a particular type
+param Holdcost { HORIZON, CARS } ; #cost to hold onto a car per quarter
+
+data ;
+param Forecast := 
+1	400
+2	300
+3	250
+4	200
+5	325
+;
+param Majorcost := 
+1	1000
+2   1100
+3   1100
+4   1200
+5   1250
+;
+param Minorcost : Leased Purchased Subleased_L Subleased_P := 
+1					10700	10500	  8000		 6000
+2					10700	10500	  8000		 6000
+3					10700	10500	  8000		 6000
+4					10700	10500	  8000		 6000
+5					10700	10500	  8000		 6000
+;
+param Holdcost: Leased Purchased Subleased_L Subleased_P := 
+1					500		700		  300		 500
+2					500		700		  300		 500
+3					500		700		  300		 500
+4					500		700		  300		 500
+5					500		700		  300		 500
+; 
+end data ;
+
+ 
+
+param Acceptable_Idle_rate default 0.10 ; #10%
+param Acceptable_Outsource_rate default 0.10 ; #10%
+
+param Expected_Outsource { HORIZON } ; #this to be passed in
+param Expected_Idle {HORIZON} ; #this to be passed in
+
+param Nocars { HORIZON, CARS } ; # this might be passed in by quarter
+
+
+
+#########################run some quarters
+let nh := 1 ;
+
+set EDR;
+param Pr {EDR} ;
+param PPr {EDR} ;
+param PPr_mean ;
+param PPr_trunc_const ;
+param edr_obj {EDR} ;
+param edr_dist {EDR} ;
+param Expected_Cost {PDS} ;
+param Expected_Q {PDS}; param Expected_O {PDS};
+param ECQ {PDS} ; param ECO {PDS} ;
+# param RecourseString {PDS} ;
+param Recourse_Costs ;
+param Netmastercost ;
+param Combinedcost ;
+#Minimum parameters
+ param MinCombinedcost default Infinity ;
+ param MinLPB default 0; param MinSB default 0;
+ param MinL default 0 ; param MinP default 0 ; param MinS default 0 ;
+ param MinEQ {PDS} default 0 ; param MinEO {PDS} default 0 ;
+ param MinECQ {PDS} default 0 ; param MinEOQ {PDS} default 0 ;
+ param MinExpectedCost {PDS} default 0 ;
+ 		param MinIdleCars default 0 ;
+		param MinOutsourceCars default 0 ;
+		param MinIdleCosts default 0 ;
+		param MinOutsourceCosts default 0 ;	
+
+param Idle_Costs ; param Outsource_Costs ;
+param Idle_Cars ; param Outsource_Cars ;
+
+param edr_O {EDR};
+param edr_Q {EDR};
+param edr_CO {EDR} ; param edr_CQ {EDR} ;
+param edr_XP {EDR,1..5}; param edr_XL {EDR,1..5};
+param Emin := 10 ; param Emax := 150 ; param Estep := 1 ;
+#param L ; param P; param S;
+param LL; param PP; param SS;
+
+
+# param F ; #changed for time dependent runs
+for {h in HORIZON} {
+	printf "Forecast for QTR: %d = %d\n", h, Forecast[h];
+	let F := Forecast[h] ;
+
+	let Fc := F ;
+	# let Fcst := Fc ;
+
+	let L := Linit ;
+	let P := Pinit ;
+	let S := Sinit ;
+	let LPBound := Linit + Pinit ; let LPB := LPBound ;
+	let SBound := Sinit ; let SB := SBound ;
+	let down := 0 ; let up := 0 ; let down2 := 0 ; let up2 := 0 ;
+
+	let MinCombinedcost := Infinity ;
+	let MinLPB := 0 ; let MinSB := 0 ;
+	let MinL := 0 ; let MinP := 0 ; let MinS := 0 ;
+	for {i in PDS} {
+		let MinEQ[i] := 0 ;
+		let MinEO[i] := 0 ;
+		let MinECQ[i] := 0 ;
+		let MinEOQ[i] := 0 ;
+		let MinExpectedCost[i] := 0 ; 
+	}
+ 	let MinIdleCars := 0 ;
+	let MinOutsourceCars := 0 ;
+	let MinIdleCosts := 0 ;
+	let MinOutsourceCosts := 0 ;
+	let Combinedcost := Infinity ;
+	let Netmastercost := Infinity ;
+
+	printf "BEGIN RUN with Forecast %d *****************************************************\n", Fc ;
+	/* printf "Forecast = %d %d\n", Fc , Fcst; */
+	#major repeat of the subproblem followed by master
+	repeat {
+		printf "%20s \n", "Starting Subproblems" ;
+		for {q in PDS} {
+			let EDQ[q] := F*seas[q];	
+			let EDR := Emin .. Emax by Estep ;
+			for {i in EDR}  {
+				let E_demand := i;
+					# subproblem
+					solve Recourse > scratchfile.out;
+
+					let PPr_trunc_const := gsl_cdf_poisson_P(Emax,EDQ[q]) - gsl_cdf_poisson_P(Emin-1,EDQ[q]) ;
+					let PPr[i] := ( gsl_cdf_poisson_P(i,EDQ[q]) - gsl_cdf_poisson_P(i-1,EDQ[q]) ) / PPr_trunc_const;
+					let edr_obj[i] := RCost ;
+					let edr_dist[i] := edr_obj[i] * PPr[i] ;
+					let edr_O[i] := O*PPr[i] ;
+					let edr_Q[i] := Q*PPr[i];
+					let edr_CO[i] := CO*edr_O[i] ;
+					let edr_CQ[i] := CQ*edr_Q[i] ;
+					for {j in 1..5} {
+						let edr_XP[i,j] := XP[j]; let edr_XL[i,j] := XL[j];
+					}
+			}
+			let Expected_Cost[q]  :=  sum {i in EDR} edr_dist[i];
+			let Expected_Q[q] := sum {i in EDR} edr_Q[i] ;
+			let Expected_O[q] := sum {i in EDR} edr_O[i] ;
+			let ECQ[q] := sum {i in EDR} edr_CQ[i] ;
+			let ECO[q] := sum {i in EDR} edr_CO[i] ;
+/* 		printf "%5s %2d %20s %4d %4d %4d %9.2f %9.2f %9.2f %9.2f %10s %10.3f %3.2f\n", 
+		  "q=",q,"(L P S EQ EO ECQ ECO)=",L, P, S, 
+		  Expected_Q[q],Expected_O[q],ECQ[q],ECO[q],
+		 "ERcost=",Expected_Cost[q], seas[q] ;
+ */	
+	} # end of loop over PDS q
+
+	let Recourse_Costs := sum {q in PDS} Expected_Cost[q] ;
+	let Idle_Cars := sum {q in PDS} Expected_Q[q] ;
+	let Outsource_Cars := sum {q in PDS} Expected_O[q] ;
+	let Idle_Costs := sum {q in PDS} ECQ[q] ;
+	let Outsource_Costs := sum {q in PDS} ECO[q] ;
+	let Combinedcost := Netmastercost + Recourse_Costs ;
+	printf "%15s: $%10.2f %15s: $%10.2f %15s: $%10.2f Min: $%10.2f\n", "Total Recourse cost",Recourse_Costs, "LastMastercost", Netmastercost,
+	"Combined cost", Combinedcost, MinCombinedcost ;
+	
+	if ( Combinedcost <= MinCombinedcost ) then {
+		let MinCombinedcost := Combinedcost ;
+		let MinLPB := LPB ; let MinSB := SB ;
+		let MinL := L ; let MinP := P ; let MinS := S ;
+		let MinIdleCars := Idle_Cars ;
+		let MinOutsourceCars := Outsource_Cars ;
+		let MinIdleCosts := Idle_Costs ;
+		let MinOutsourceCosts := Outsource_Costs ;
+		printf "Min Combined Cost: %10.2f %d %d %d %d %d %d %d $%10.2f $%10.2f\n", 
+			MinCombinedcost, MinL, MinP, MinS, MinLPB, MinSB, MinIdleCars, MinOutsourceCars, MinIdleCosts, MinOutsourceCosts ;
+	}
+	#printf "%15s %10.0f %10.0f %10.0f %10.0f\n", "Duals =", Lcars, Pcars, useallcars, outsource;
+#	printf "%15s %10.3f %10.3f\n", "(EQ, EO)=", 
+#	 sum {q in PDS} Expected_Q[q]*seas[q], sum {q in PDS} Expected_O[q]*seas[q] ;
+	
+	let ERecourseCost := Recourse_Costs ;
+	let LPB := LPBound ;
+	let SB := SBound ;
+
+	printf "%30s %10.3f IC=%10.3f OC=%10.3f LPB=%10d SB=%10d\n", 
+	 "Starting Master Problem with recourse cost = ",
+	 ERecourseCost, Idle_Costs, Outsource_Costs, LPB, SB ;
+	 
+	# quarter
+	solve Quarter;
+	
+	let Netmastercost := Qcost-ERecourseCost ;
+	printf "%10s %10.2f %10s %10.2f %10s %5d %5d %5d\n", "Qcost=", Qcost, "Netmastercost=",Netmastercost,"(Lop Pop Sop)=", Lop, Pop, Sop;
+	#printf "%15s %10.3f %10.3f\n\n", "Dual Prices: ", cars.dual, totcars.dual;
+	
+	let L := Lop; let P := Pop; let S := Sop; #?????
+	#let Qcostmin := min (Qcost, Qcostold) ;
+	
+	# stopping
+	#if Qcostold > Qcost + 0.01
+	#	then { 
+	if Idle_Costs > Outsource_Costs then {
+		  printf "%15s %10.3f %10.3f\n", "Idle > Out", Idle_Costs, Outsource_Costs ;
+		  let LPBound := LPBound - 1 ;
+		  let down := 1 ; 
+		  if ( down == 1 and up == 1 ) then let down2 := 1 ; #happens when we reverse from an up cycle
+		  if ( down2 == 1 ) then  {
+			printf "Found a switch back down2, $%10.2f %4d %4d %4d\n", Netmastercost, L, P, S ;
+			}
+	}
+	if Idle_Costs <= Outsource_Costs then {
+		  printf "%15s %10.3f %10.3f\n", "Idle < Out", Idle_Costs, Outsource_Costs ;
+		  let LPBound := LPBound + 1 ; 
+		  let up := 1 ;
+		  if ( down == 1 and up == 1 ) then let up2 := 1 ;  #happens when we reverse from a down cycle
+		  if ( up2 == 1 ) then  {
+			printf "Found a switch back up2, $%10.2f %4d %4d %4d\n", Netmastercost, L, P, S ;
+			}
+
+	}
+		# let Qcostold := Qcost ; 
+		# let Idlecostold := Idle_Costs ;
+		# let Outsourcecostold := Outsource_Costs ;
+	
+	if ( down2 == 1 and up2 == 1 ) then {
+		printf "%15s %10.3f %10.3f %10.3f %10.3f %4d %4d %4d\n", "Gonna break.",
+		 Qcost, Qcostold, Idle_Costs, Outsource_Costs, Lop, Pop, Sop ;
+		let Qcostold := Qcost ; 
+		break ;
+	}
+	# else { 
+		 # printf "%15s %10.3f %10.3f %10.3f %10.3f %5d %5d %5d\n", "About to break.",
+		    # Qcost, Qcostold, Idle_Costs, Outsource_Costs, Lop, Pop, Sop;
+		 # break;	
+# };
+	}
+
+# rerun
+# finish off by rerunning the subproblem
+
+	let L := MinL ;
+	let P := MinP ;
+	let S := MinS ;
+	printf "Rerunning subproblem 1 with (L,P,S)= %d %d %d : bounds are %d %d\n", MinL, MinP, MinS, MinLPB, MinSB ;
+
+	for {q in PDS} {
+		let EDQ[q] := F*seas[q];	 
+		let PPr_mean := EDQ[q] ;
+		let EDR := Emin .. Emax by Estep ;
+	
+		for {i in EDR}  {
+			let E_demand := i;
+				solve Recourse > scratchfile.out;
+				let PPr_trunc_const := gsl_cdf_poisson_P(Emax,PPr_mean) - gsl_cdf_poisson_P(Emin-1,PPr_mean) ;
+				let PPr[i] := ( gsl_cdf_poisson_P(i,PPr_mean) - gsl_cdf_poisson_P(i-1,PPr_mean) ) / PPr_trunc_const;
+				let edr_obj[i] := RCost ;
+				let edr_dist[i] := edr_obj[i] * PPr[i] ;
+				let edr_O[i] := O*PPr[i] ;
+				let edr_Q[i] := Q*PPr[i];
+				let edr_CO[i] := CO*edr_O[i] ;
+				let edr_CQ[i] := CQ*edr_Q[i] ;
+				for {j in 1..5} {
+					let edr_XP[i,j] := XP[j]; let edr_XL[i,j] := XL[j];
+				}
+		}
+		let Expected_Cost[q]  :=  sum {i in EDR} edr_dist[i] ;
+		let Expected_Q[q] := sum {i in EDR} edr_Q[i] ;
+		let Expected_O[q] := sum {i in EDR} edr_O[i] ;
+		let ECO[q] := CO*Expected_O[q] ;
+		let ECQ[q] := CQ*Expected_Q[q] ;
+		printf "%5s %2d %20s %4d %4d %4d %9.2f %9.2f %9.2f %9.2f %10s %10.3f\n", 
+			  "q=",q,"(L P S EQ EO ECQ ECO)=",L, P, S, 
+			  Expected_Q[q],Expected_O[q],ECQ[q],ECO[q],
+			 "ERcost=",Expected_Cost[q] ;
+	}
+
+# display results
+let Recourse_Costs := sum {q in PDS} Expected_Cost[q] ;
+printf "\n%15s: $%10.2f $%10.2f = $%10.2f + $%10.2f Final Cost= $%10.2f\n", 
+	"Total Recourse cost",Recourse_Costs, Qcost, ERecourseCost, Netmastercost, Netmastercost + Recourse_Costs ;
+	
+# printf "%15s: $%10.2f %15s: $%10.2f %15s: $%10.2f \n", "Total Recourse cost",Recourse_Costs, "NetMastercost", Netmastercost,
+#	"Combined cost", Netmastercost + Recourse_Costs ;
+# printf "%15s: %10d %10d %10d\n", "Lop Pop Sop", Lop, Pop, Sop;
+
+#run again for final results including a rerun of recourse averages for each of the 6 trips
+printf "\nFINAL RESULTS\n%10s $%10.2f %10s %4d %4d\n", "Min Combined Cost:", MinCombinedcost, "at bounds:", MinLPB, MinSB ;
+printf "%10s %4d %4d %4d\n", "Min Car allocation:", MinL, MinP, MinS ;
+
+printf "Idle Cars: %5d Costs: $%10.2f Outsource cars: %5d Costs: $%10.2f\n", 
+	MinIdleCars, MinIdleCosts, MinOutsourceCars, MinOutsourceCosts ;
+
+#rerun with the min
+let L := MinL ; 
+let P := MinP ; 
+let S := MinS ;	
+let LPB := MinLPB ;
+let SB := MinSB ;
+printf "Rerunning subproblem again 2 with (L,P,S)= %d %d %d : bounds are %d %d\n", MinL, MinP, MinS, MinLPB, MinSB ;
+for {q in PDS} {
+	let EDQ[q] := F*seas[q];	 
+	let PPr_mean := EDQ[q] ;
+	let EDR := Emin .. Emax by Estep ;
+	
+	for {i in EDR}  {
+		let E_demand := i;
+		#options solver_msg 1 ; #turn on final schedule into scratchfile
+			solve Recourse > finalscratchfile.out;
+			let PPr_trunc_const := gsl_cdf_poisson_P(Emax,PPr_mean) - gsl_cdf_poisson_P(Emin-1,PPr_mean) ;
+			let PPr[i] := ( gsl_cdf_poisson_P(i,PPr_mean) - gsl_cdf_poisson_P(i-1,PPr_mean) ) / PPr_trunc_const;
+			let edr_obj[i] := RCost ;
+			let edr_dist[i] := edr_obj[i] * PPr[i] ;
+			let edr_O[i] := O*PPr[i] ;
+ 			let edr_Q[i] := Q*PPr[i];
+ 			let edr_CO[i] := CO*edr_O[i] ;
+ 			let edr_CQ[i] := CQ*edr_Q[i] ;
+			for {j in 1..5} {
+				let edr_XP[i,j] := XP[j]; let edr_XL[i,j] := XL[j];
+			}
+	}
+	let Expected_Cost[q]  :=  sum {i in EDR} edr_dist[i] ;
+	let Expected_Q[q] := sum {i in EDR} edr_Q[i] ;
+	let Expected_O[q] := sum {i in EDR} edr_O[i] ;
+	let ECO[q] := CO*Expected_O[q] ;
+	let ECQ[q] := CQ*Expected_Q[q] ;
+ 	printf "%5s %2d %20s %4d %4d %4d %9.2f %9.2f %9.2f %9.2f %10s %10.3f %3.2f\n", 
+		  "q=",q,"(L P S EQ EO ECQ ECO)=",L, P, S, 
+		  Expected_Q[q],Expected_O[q],ECQ[q],ECO[q],
+		 "ERcost=",Expected_Cost[q], seas[q] ;
+} 
+
+
+
+printf "\n%s\n", "END RUN *****************************************************" ;
+
+
+
+
+
+
+	
+/* 	let Nocars[ h, Leased ] := L ;
+	let Nocars[ h, Purchased ] := P ;	
+	let Nocars[ h, Subleased_L ] := S ;
+	let Nocars[ h, Subleased_P ] := 0 ; */
+	
+	#solve ;
+/* 	printf "Cars: %d %d %d %d\n", 
+		Nocars[ t, Leased ], Nocars[ t, Purchased ], Nocars[ t, Subleased_L ], Nocars[ t, Subleased_P ] ; */
+/* 	#printf "QUARTER:%d Cost:%10.2f EQ:%d EO:%d \n", 
+		q, Cost_per_qtr, Expected_Idle, Expected_Outsource ;
+	printf "Idle Rate: %4.2f Outsource Rate: %4.2f\n", Idle_Rate, Outsource_Rate ;
+ */	
+    printf "Acceptable Idle Rate: %4.2f Outsource Rate: %4.2f\n\n", Acceptable_Idle_rate, Acceptable_Outsource_rate ;
+
+}
