@@ -1,0 +1,946 @@
+Forecast for QTR: 1 = 400
+BEGIN RUN with Forecast 400 *****************************************************
+Starting Subproblems 
+Total Recourse cost: $   8463.98  LastMastercost: $  Infinity   Combined cost: $  Infinity Min: $  Infinity
+Mins: Combined Cost: $  Infinity LPS: 69 0 5 Bounds: 69 5 IOCars: 59 75 IOCost: $ 2957.30 $ 2250.73
+Starting Master Problem with recourse cost =    8463.980 IC=  2957.300 OC=  2250.726 LPB=        69 SB=         5
+    Qcost=   24423.98 Netmastercost=   15960.00 (Lop Pop Sop)=    69     0     5
+     Idle > Out   2957.300   2250.726
+Starting Subproblems 
+Total Recourse cost: $   8463.98  LastMastercost: $  15960.00   Combined cost: $  24423.98 Min: $  Infinity
+Mins: Combined Cost: $  24423.98 LPS: 69 0 5 Bounds: 69 5 IOCars: 59 75 IOCost: $ 2957.30 $ 2250.73
+Starting Master Problem with recourse cost =    8463.980 IC=  2957.300 OC=  2250.726 LPB=        68 SB=         5
+    Qcost=   24183.98 Netmastercost=   15720.00 (Lop Pop Sop)=    68     0     5
+     Idle > Out   2957.300   2250.726
+Starting Subproblems 
+Total Recourse cost: $   8346.62  LastMastercost: $  15720.00   Combined cost: $  24066.62 Min: $  24423.98
+Mins: Combined Cost: $  24066.62 LPS: 68 0 5 Bounds: 68 5 IOCars: 55 77 IOCost: $ 2787.83 $ 2329.05
+Starting Master Problem with recourse cost =    8346.621 IC=  2787.833 OC=  2329.045 LPB=        67 SB=         5
+    Qcost=   23826.62 Netmastercost=   15480.00 (Lop Pop Sop)=    67     0     5
+     Idle > Out   2787.833   2329.045
+Starting Subproblems 
+Total Recourse cost: $   8236.31  LastMastercost: $  15480.00   Combined cost: $  23716.31 Min: $  24066.62
+Mins: Combined Cost: $  23716.31 LPS: 67 0 5 Bounds: 67 5 IOCars: 52 80 IOCost: $ 2623.40 $ 2410.39
+Starting Master Problem with recourse cost =    8236.312 IC=  2623.403 OC=  2410.388 LPB=        66 SB=         5
+    Qcost=   23476.31 Netmastercost=   15240.00 (Lop Pop Sop)=    66     0     5
+     Idle > Out   2623.403   2410.388
+Starting Subproblems 
+Total Recourse cost: $   8133.29  LastMastercost: $  15240.00   Combined cost: $  23373.29 Min: $  23716.31
+Mins: Combined Cost: $  23373.29 LPS: 66 0 5 Bounds: 66 5 IOCars: 49 83 IOCost: $ 2464.18 $ 2494.85
+Starting Master Problem with recourse cost =    8133.286 IC=  2464.180 OC=  2494.854 LPB=        65 SB=         5
+    Qcost=   23133.29 Netmastercost=   15000.00 (Lop Pop Sop)=    65     0     5
+     Idle < Out   2464.180   2494.854
+Found a switch back up2, $  15000.00   65    0    5
+Starting Subproblems 
+Total Recourse cost: $   8037.71  LastMastercost: $  15000.00   Combined cost: $  23037.71 Min: $  23373.29
+Mins: Combined Cost: $  23037.71 LPS: 65 0 5 Bounds: 65 5 IOCars: 46 86 IOCost: $ 2310.28 $ 2582.51
+Starting Master Problem with recourse cost =    8037.706 IC=  2310.278 OC=  2582.512 LPB=        66 SB=         5
+    Qcost=   23277.71 Netmastercost=   15240.00 (Lop Pop Sop)=    66     0     5
+     Idle < Out   2310.278   2582.512
+Found a switch back up2, $  15240.00   66    0    5
+Starting Subproblems 
+Total Recourse cost: $   8133.29  LastMastercost: $  15240.00   Combined cost: $  23373.29 Min: $  23037.71
+Starting Master Problem with recourse cost =    8133.286 IC=  2464.180 OC=  2494.854 LPB=        67 SB=         5
+    Qcost=   23613.29 Netmastercost=   15480.00 (Lop Pop Sop)=    67     0     5
+     Idle < Out   2464.180   2494.854
+Found a switch back up2, $  15480.00   67    0    5
+Starting Subproblems 
+Total Recourse cost: $   8236.31  LastMastercost: $  15480.00   Combined cost: $  23716.31 Min: $  23037.71
+Starting Master Problem with recourse cost =    8236.312 IC=  2623.403 OC=  2410.388 LPB=        68 SB=         5
+    Qcost=   23956.31 Netmastercost=   15720.00 (Lop Pop Sop)=    68     0     5
+     Idle > Out   2623.403   2410.388
+Found a switch back down2, $  15720.00   68    0    5
+   Gonna break.  23956.312   Infinity   2623.403   2410.388   68    0    5
+Rerunning subproblem 1 with (L,P,S)= 65 0 5 : bounds are 65 5
+   q=  1 (L P S EQ EO ECQ ECO)=   65    0    5      0.03     20.03      1.37    600.82    ERcost=   1203.323
+   q=  2 (L P S EQ EO ECQ ECO)=   65    0    5      0.00     59.88      0.00   1796.35    ERcost=   2397.746
+   q=  3 (L P S EQ EO ECQ ECO)=   65    0    5     20.00      0.00   1000.16      0.09    ERcost=   1401.022
+   q=  4 (L P S EQ EO ECQ ECO)=   65    0    5      3.09      3.09    154.30     92.58    ERcost=    817.296
+   q=  5 (L P S EQ EO ECQ ECO)=   65    0    5     20.00      0.00   1000.16      0.09    ERcost=   1401.022
+   q=  6 (L P S EQ EO ECQ ECO)=   65    0    5      3.09      3.09    154.30     92.58    ERcost=    817.296
+
+Total Recourse cost: $   8037.71
+
+FINAL RESULTS
+Rerunning subproblem again 2 with (L,P,S)= 65 0 5 : bounds are 65 5
+   q=  1 (L P S EQ EO ECQ ECO)=   65    0    5      0.03     20.03      1.37    600.82    ERcost=   1203.323 0.20
+   q=  2 (L P S EQ EO ECQ ECO)=   65    0    5      0.00     59.88      0.00   1796.35    ERcost=   2397.746 0.30
+   q=  3 (L P S EQ EO ECQ ECO)=   65    0    5     20.00      0.00   1000.16      0.09    ERcost=   1401.022 0.10
+   q=  4 (L P S EQ EO ECQ ECO)=   65    0    5      3.09      3.09    154.30     92.58    ERcost=    817.296 0.15
+   q=  5 (L P S EQ EO ECQ ECO)=   65    0    5     20.00      0.00   1000.16      0.09    ERcost=   1401.022 0.10
+   q=  6 (L P S EQ EO ECQ ECO)=   65    0    5      3.09      3.09    154.30     92.58    ERcost=    817.296 0.15
+
+All the answers for Horizon Period 1
+Mins: Combined Cost: $  23037.71 LPS: 65 0 5 Bounds: 65 5 Recourse Cost: $   8037.71 IOCars: 46 86 IOCost: $ 2310.28 $ 2582.51
+
+END RUN for Period 1 *****************************************************
+
+Acceptable Idle Rate: 10.00% Outsource Rate: 10.00%
+
+Forecast for QTR: 2 = 300
+BEGIN RUN with Forecast 300 *****************************************************
+Starting Subproblems 
+Total Recourse cost: $   9133.81  LastMastercost: $  Infinity   Combined cost: $  Infinity Min: $  Infinity
+Mins: Combined Cost: $  Infinity LPS: 69 0 5 Bounds: 69 5 IOCars: 111 27 IOCost: $ 5577.04 $  826.23
+Starting Master Problem with recourse cost =    9133.808 IC=  5577.041 OC=   826.234 LPB=        69 SB=         5
+    Qcost=   25093.81 Netmastercost=   15960.00 (Lop Pop Sop)=    69     0     5
+     Idle > Out   5577.041    826.234
+Starting Subproblems 
+Total Recourse cost: $   9133.81  LastMastercost: $  15960.00   Combined cost: $  25093.81 Min: $  Infinity
+Mins: Combined Cost: $  25093.81 LPS: 69 0 5 Bounds: 69 5 IOCars: 111 27 IOCost: $ 5577.04 $  826.23
+Starting Master Problem with recourse cost =    9133.808 IC=  5577.041 OC=   826.234 LPB=        68 SB=         5
+    Qcost=   24853.81 Netmastercost=   15720.00 (Lop Pop Sop)=    68     0     5
+     Idle > Out   5577.041    826.234
+Starting Subproblems 
+Total Recourse cost: $   8926.62  LastMastercost: $  15720.00   Combined cost: $  24646.62 Min: $  25093.81
+Mins: Combined Cost: $  24646.62 LPS: 68 0 5 Bounds: 68 5 IOCars: 106 28 IOCost: $ 5343.38 $  866.03
+Starting Master Problem with recourse cost =    8926.624 IC=  5343.376 OC=   866.035 LPB=        67 SB=         5
+    Qcost=   24406.62 Netmastercost=   15480.00 (Lop Pop Sop)=    67     0     5
+     Idle > Out   5343.376    866.035
+Starting Subproblems 
+Total Recourse cost: $   8723.03  LastMastercost: $  15480.00   Combined cost: $  24203.03 Min: $  24646.62
+Mins: Combined Cost: $  24203.03 LPS: 67 0 5 Bounds: 67 5 IOCars: 102 30 IOCost: $ 5112.27 $  907.37
+Starting Master Problem with recourse cost =    8723.027 IC=  5112.275 OC=   907.374 LPB=        66 SB=         5
+    Qcost=   23963.03 Netmastercost=   15240.00 (Lop Pop Sop)=    66     0     5
+     Idle > Out   5112.275    907.374
+Starting Subproblems 
+Total Recourse cost: $   8523.28  LastMastercost: $  15240.00   Combined cost: $  23763.28 Min: $  24203.03
+Mins: Combined Cost: $  23763.28 LPS: 66 0 5 Bounds: 66 5 IOCars: 97 31 IOCost: $ 4883.93 $  950.37
+Starting Master Problem with recourse cost =    8523.284 IC=  4883.927 OC=   950.366 LPB=        65 SB=         5
+    Qcost=   23523.28 Netmastercost=   15000.00 (Lop Pop Sop)=    65     0     5
+     Idle > Out   4883.927    950.366
+Starting Subproblems 
+Total Recourse cost: $   8327.65  LastMastercost: $  15000.00   Combined cost: $  23327.65 Min: $  23763.28
+Mins: Combined Cost: $  23327.65 LPS: 65 0 5 Bounds: 65 5 IOCars: 93 33 IOCost: $ 4658.52 $  995.12
+Starting Master Problem with recourse cost =    8327.651 IC=  4658.518 OC=   995.120 LPB=        64 SB=         5
+    Qcost=   23087.65 Netmastercost=   14760.00 (Lop Pop Sop)=    64     0     5
+     Idle > Out   4658.518    995.120
+Starting Subproblems 
+Total Recourse cost: $   8136.38  LastMastercost: $  14760.00   Combined cost: $  22896.38 Min: $  23327.65
+Mins: Combined Cost: $  22896.38 LPS: 64 0 5 Bounds: 64 5 IOCars: 88 34 IOCost: $ 4436.23 $ 1041.74
+Starting Master Problem with recourse cost =    8136.379 IC=  4436.226 OC=  1041.744 LPB=        63 SB=         5
+    Qcost=   22656.38 Netmastercost=   14520.00 (Lop Pop Sop)=    63     0     5
+     Idle > Out   4436.226   1041.744
+Starting Subproblems 
+Total Recourse cost: $   7949.71  LastMastercost: $  14520.00   Combined cost: $  22469.71 Min: $  22896.38
+Mins: Combined Cost: $  22469.71 LPS: 63 0 5 Bounds: 63 5 IOCars: 84 36 IOCost: $ 4217.23 $ 1090.34
+Starting Master Problem with recourse cost =    7949.714 IC=  4217.225 OC=  1090.344 LPB=        62 SB=         5
+    Qcost=   22229.71 Netmastercost=   14280.00 (Lop Pop Sop)=    62     0     5
+     Idle > Out   4217.225   1090.344
+Starting Subproblems 
+Total Recourse cost: $   7767.90  LastMastercost: $  14280.00   Combined cost: $  22047.90 Min: $  22469.71
+Mins: Combined Cost: $  22047.90 LPS: 62 0 5 Bounds: 62 5 IOCars: 80 38 IOCost: $ 4001.70 $ 1141.03
+Starting Master Problem with recourse cost =    7767.905 IC=  4001.696 OC=  1141.026 LPB=        61 SB=         5
+    Qcost=   21807.90 Netmastercost=   14040.00 (Lop Pop Sop)=    61     0     5
+     Idle > Out   4001.696   1141.026
+Starting Subproblems 
+Total Recourse cost: $   7591.21  LastMastercost: $  14040.00   Combined cost: $  21631.21 Min: $  22047.90
+Mins: Combined Cost: $  21631.21 LPS: 61 0 5 Bounds: 61 5 IOCars: 75 39 IOCost: $ 3789.82 $ 1193.90
+Starting Master Problem with recourse cost =    7591.210 IC=  3789.821 OC=  1193.902 LPB=        60 SB=         5
+    Qcost=   21391.21 Netmastercost=   13800.00 (Lop Pop Sop)=    60     0     5
+     Idle > Out   3789.821   1193.902
+Starting Subproblems 
+Total Recourse cost: $   7419.91  LastMastercost: $  13800.00   Combined cost: $  21219.91 Min: $  21631.21
+Mins: Combined Cost: $  21219.91 LPS: 60 0 5 Bounds: 60 5 IOCars: 71 41 IOCost: $ 3581.80 $ 1249.09
+Starting Master Problem with recourse cost =    7419.909 IC=  3581.801 OC=  1249.090 LPB=        59 SB=         5
+    Qcost=   20979.91 Netmastercost=   13560.00 (Lop Pop Sop)=    59     0     5
+     Idle > Out   3581.801   1249.090
+Starting Subproblems 
+Total Recourse cost: $   7254.31  LastMastercost: $  13560.00   Combined cost: $  20814.31 Min: $  21219.91
+Mins: Combined Cost: $  20814.31 LPS: 59 0 5 Bounds: 59 5 IOCars: 67 43 IOCost: $ 3377.86 $ 1306.72
+Starting Master Problem with recourse cost =    7254.308 IC=  3377.856 OC=  1306.722 LPB=        58 SB=         5
+    Qcost=   20574.31 Netmastercost=   13320.00 (Lop Pop Sop)=    58     0     5
+     Idle > Out   3377.856   1306.722
+Starting Subproblems 
+Total Recourse cost: $   7094.75  LastMastercost: $  13320.00   Combined cost: $  20414.75 Min: $  20814.31
+Mins: Combined Cost: $  20414.75 LPS: 58 0 5 Bounds: 58 5 IOCars: 63 45 IOCost: $ 3178.23 $ 1366.95
+Starting Master Problem with recourse cost =    7094.748 IC=  3178.227 OC=  1366.945 LPB=        57 SB=         5
+    Qcost=   20174.75 Netmastercost=   13080.00 (Lop Pop Sop)=    57     0     5
+     Idle > Out   3178.227   1366.945
+Starting Subproblems 
+Total Recourse cost: $   6941.60  LastMastercost: $  13080.00   Combined cost: $  20021.60 Min: $  20414.75
+Mins: Combined Cost: $  20021.60 LPS: 57 0 5 Bounds: 57 5 IOCars: 59 47 IOCost: $ 2983.18 $ 1429.92
+Starting Master Problem with recourse cost =    6941.604 IC=  2983.185 OC=  1429.920 LPB=        56 SB=         5
+    Qcost=   19781.60 Netmastercost=   12840.00 (Lop Pop Sop)=    56     0     5
+     Idle > Out   2983.185   1429.920
+Starting Subproblems 
+Total Recourse cost: $   6795.28  LastMastercost: $  12840.00   Combined cost: $  19635.28 Min: $  20021.60
+Mins: Combined Cost: $  19635.28 LPS: 56 0 5 Bounds: 56 5 IOCars: 55 49 IOCost: $ 2793.02 $ 1495.82
+Starting Master Problem with recourse cost =    6795.285 IC=  2793.019 OC=  1495.821 LPB=        55 SB=         5
+    Qcost=   19395.28 Netmastercost=   12600.00 (Lop Pop Sop)=    55     0     5
+     Idle > Out   2793.019   1495.821
+Starting Subproblems 
+Total Recourse cost: $   6656.22  LastMastercost: $  12600.00   Combined cost: $  19256.22 Min: $  19635.28
+Mins: Combined Cost: $  19256.22 LPS: 55 0 5 Bounds: 55 5 IOCars: 52 52 IOCost: $ 2608.04 $ 1564.83
+Starting Master Problem with recourse cost =    6656.217 IC=  2608.037 OC=  1564.831 LPB=        54 SB=         5
+    Qcost=   19016.22 Netmastercost=   12360.00 (Lop Pop Sop)=    54     0     5
+     Idle > Out   2608.037   1564.831
+Starting Subproblems 
+Total Recourse cost: $   6524.89  LastMastercost: $  12360.00   Combined cost: $  18884.89 Min: $  19256.22
+Mins: Combined Cost: $  18884.89 LPS: 54 0 5 Bounds: 54 5 IOCars: 48 54 IOCost: $ 2428.55 $ 1637.14
+Starting Master Problem with recourse cost =    6524.886 IC=  2428.548 OC=  1637.138 LPB=        53 SB=         5
+    Qcost=   18644.89 Netmastercost=   12120.00 (Lop Pop Sop)=    53     0     5
+     Idle > Out   2428.548   1637.138
+Starting Subproblems 
+Total Recourse cost: $   6401.66  LastMastercost: $  12120.00   Combined cost: $  18521.66 Min: $  18884.89
+Mins: Combined Cost: $  18521.66 LPS: 53 0 5 Bounds: 53 5 IOCars: 45 57 IOCost: $ 2254.85 $ 1712.92
+Starting Master Problem with recourse cost =    6401.662 IC=  2254.854 OC=  1712.921 LPB=        52 SB=         5
+    Qcost=   18281.66 Netmastercost=   11880.00 (Lop Pop Sop)=    52     0     5
+     Idle > Out   2254.854   1712.921
+Starting Subproblems 
+Total Recourse cost: $   6286.93  LastMastercost: $  11880.00   Combined cost: $  18166.93 Min: $  18521.66
+Mins: Combined Cost: $  18166.93 LPS: 52 0 5 Bounds: 52 5 IOCars: 41 59 IOCost: $ 2087.22 $ 1792.34
+Starting Master Problem with recourse cost =    6286.927 IC=  2087.223 OC=  1792.343 LPB=        51 SB=         5
+    Qcost=   17926.93 Netmastercost=   11640.00 (Lop Pop Sop)=    51     0     5
+     Idle > Out   2087.223   1792.343
+Starting Subproblems 
+Total Recourse cost: $   6180.99  LastMastercost: $  11640.00   Combined cost: $  17820.99 Min: $  18166.93
+Mins: Combined Cost: $  17820.99 LPS: 51 0 5 Bounds: 51 5 IOCars: 38 62 IOCost: $ 1925.88 $ 1875.54
+Starting Master Problem with recourse cost =    6180.994 IC=  1925.882 OC=  1875.538 LPB=        50 SB=         5
+    Qcost=   17580.99 Netmastercost=   11400.00 (Lop Pop Sop)=    50     0     5
+     Idle > Out   1925.882   1875.538
+Starting Subproblems 
+Total Recourse cost: $   6084.09  LastMastercost: $  11400.00   Combined cost: $  17484.09 Min: $  17820.99
+Mins: Combined Cost: $  17484.09 LPS: 50 0 5 Bounds: 50 5 IOCars: 35 65 IOCost: $ 1771.00 $ 1962.61
+Starting Master Problem with recourse cost =    6084.094 IC=  1770.995 OC=  1962.606 LPB=        49 SB=         5
+    Qcost=   17244.09 Netmastercost=   11160.00 (Lop Pop Sop)=    49     0     5
+     Idle < Out   1770.995   1962.606
+Found a switch back up2, $  11160.00   49    0    5
+Starting Subproblems 
+Total Recourse cost: $   5996.36  LastMastercost: $  11160.00   Combined cost: $  17156.36 Min: $  17484.09
+Mins: Combined Cost: $  17156.36 LPS: 49 0 5 Bounds: 49 5 IOCars: 32 68 IOCost: $ 1622.66 $ 2053.60
+Starting Master Problem with recourse cost =    5996.359 IC=  1622.656 OC=  2053.603 LPB=        50 SB=         5
+    Qcost=   17396.36 Netmastercost=   11400.00 (Lop Pop Sop)=    50     0     5
+     Idle < Out   1622.656   2053.603
+Found a switch back up2, $  11400.00   50    0    5
+Starting Subproblems 
+Total Recourse cost: $   6084.09  LastMastercost: $  11400.00   Combined cost: $  17484.09 Min: $  17156.36
+Starting Master Problem with recourse cost =    6084.094 IC=  1770.995 OC=  1962.606 LPB=        51 SB=         5
+    Qcost=   17724.09 Netmastercost=   11640.00 (Lop Pop Sop)=    51     0     5
+     Idle < Out   1770.995   1962.606
+Found a switch back up2, $  11640.00   51    0    5
+Starting Subproblems 
+Total Recourse cost: $   6180.99  LastMastercost: $  11640.00   Combined cost: $  17820.99 Min: $  17156.36
+Starting Master Problem with recourse cost =    6180.994 IC=  1925.882 OC=  1875.538 LPB=        52 SB=         5
+    Qcost=   18060.99 Netmastercost=   11880.00 (Lop Pop Sop)=    52     0     5
+     Idle > Out   1925.882   1875.538
+Found a switch back down2, $  11880.00   52    0    5
+   Gonna break.  18060.994  23956.312   1925.882   1875.538   52    0    5
+Rerunning subproblem 1 with (L,P,S)= 49 0 5 : bounds are 49 5
+   q=  1 (L P S EQ EO ECQ ECO)=   49    0    5      0.04     16.04      1.94    481.17    ERcost=    923.598
+   q=  2 (L P S EQ EO ECQ ECO)=   49    0    5      0.00     46.00      0.00   1380.00    ERcost=   1820.880
+   q=  3 (L P S EQ EO ECQ ECO)=   49    0    5     14.02      0.02    700.80      0.49    ERcost=   1001.730
+   q=  4 (L P S EQ EO ECQ ECO)=   49    0    5      2.19      3.19    109.55     95.73    ERcost=    624.210
+   q=  5 (L P S EQ EO ECQ ECO)=   49    0    5     14.02      0.02    700.80      0.49    ERcost=   1001.730
+   q=  6 (L P S EQ EO ECQ ECO)=   49    0    5      2.19      3.19    109.55     95.73    ERcost=    624.210
+
+Total Recourse cost: $   5996.36
+
+FINAL RESULTS
+Rerunning subproblem again 2 with (L,P,S)= 49 0 5 : bounds are 49 5
+   q=  1 (L P S EQ EO ECQ ECO)=   49    0    5      0.04     16.04      1.94    481.17    ERcost=    923.598 0.20
+   q=  2 (L P S EQ EO ECQ ECO)=   49    0    5      0.00     46.00      0.00   1380.00    ERcost=   1820.880 0.30
+   q=  3 (L P S EQ EO ECQ ECO)=   49    0    5     14.02      0.02    700.80      0.49    ERcost=   1001.730 0.10
+   q=  4 (L P S EQ EO ECQ ECO)=   49    0    5      2.19      3.19    109.55     95.73    ERcost=    624.210 0.15
+   q=  5 (L P S EQ EO ECQ ECO)=   49    0    5     14.02      0.02    700.80      0.49    ERcost=   1001.730 0.10
+   q=  6 (L P S EQ EO ECQ ECO)=   49    0    5      2.19      3.19    109.55     95.73    ERcost=    624.210 0.15
+
+All the answers for Horizon Period 2
+Mins: Combined Cost: $  17156.36 LPS: 49 0 5 Bounds: 49 5 Recourse Cost: $   5996.36 IOCars: 32 68 IOCost: $ 1622.66 $ 2053.60
+
+END RUN for Period 2 *****************************************************
+
+Acceptable Idle Rate: 10.00% Outsource Rate: 10.00%
+
+Forecast for QTR: 3 = 250
+BEGIN RUN with Forecast 250 *****************************************************
+Starting Subproblems 
+Total Recourse cost: $  10007.11  LastMastercost: $  Infinity   Combined cost: $  Infinity Min: $  Infinity
+Mins: Combined Cost: $  Infinity LPS: 69 0 5 Bounds: 69 5 IOCars: 145 11 IOCost: $ 7272.71 $  343.85
+Starting Master Problem with recourse cost =   10007.115 IC=  7272.711 OC=   343.845 LPB=        69 SB=         5
+    Qcost=   25967.11 Netmastercost=   15960.00 (Lop Pop Sop)=    69     0     5
+     Idle > Out   7272.711    343.845
+Starting Subproblems 
+Total Recourse cost: $  10007.11  LastMastercost: $  15960.00   Combined cost: $  25967.11 Min: $  Infinity
+Mins: Combined Cost: $  25967.11 LPS: 69 0 5 Bounds: 69 5 IOCars: 145 11 IOCost: $ 7272.71 $  343.85
+Starting Master Problem with recourse cost =   10007.115 IC=  7272.711 OC=   343.845 LPB=        68 SB=         5
+    Qcost=   25727.11 Netmastercost=   15720.00 (Lop Pop Sop)=    68     0     5
+     Idle > Out   7272.711    343.845
+Starting Subproblems 
+Total Recourse cost: $   9773.05  LastMastercost: $  15720.00   Combined cost: $  25493.05 Min: $  25967.11
+Mins: Combined Cost: $  25493.05 LPS: 68 0 5 Bounds: 68 5 IOCars: 140 12 IOCost: $ 7019.84 $  372.12
+Starting Master Problem with recourse cost =    9773.054 IC=  7019.837 OC=   372.122 LPB=        67 SB=         5
+    Qcost=   25253.05 Netmastercost=   15480.00 (Lop Pop Sop)=    67     0     5
+     Idle > Out   7019.837    372.122
+Starting Subproblems 
+Total Recourse cost: $   9541.01  LastMastercost: $  15480.00   Combined cost: $  25021.01 Min: $  25493.05
+Mins: Combined Cost: $  25021.01 LPS: 67 0 5 Bounds: 67 5 IOCars: 135 13 IOCost: $ 6768.40 $  401.26
+Starting Master Problem with recourse cost =    9541.009 IC=  6768.404 OC=   401.262 LPB=        66 SB=         5
+    Qcost=   24781.01 Netmastercost=   15240.00 (Lop Pop Sop)=    66     0     5
+     Idle > Out   6768.404    401.262
+Starting Subproblems 
+Total Recourse cost: $   9310.97  LastMastercost: $  15240.00   Combined cost: $  24550.97 Min: $  25021.01
+Mins: Combined Cost: $  24550.97 LPS: 66 0 5 Bounds: 66 5 IOCars: 130 14 IOCost: $ 6518.41 $  431.26
+Starting Master Problem with recourse cost =    9310.971 IC=  6518.406 OC=   431.262 LPB=        65 SB=         5
+    Qcost=   24310.97 Netmastercost=   15000.00 (Lop Pop Sop)=    65     0     5
+     Idle > Out   6518.406    431.262
+Starting Subproblems 
+Total Recourse cost: $   9082.98  LastMastercost: $  15000.00   Combined cost: $  24082.98 Min: $  24550.97
+Mins: Combined Cost: $  24082.98 LPS: 65 0 5 Bounds: 65 5 IOCars: 125 15 IOCost: $ 6269.87 $  462.14
+Starting Master Problem with recourse cost =    9082.984 IC=  6269.873 OC=   462.143 LPB=        64 SB=         5
+    Qcost=   23842.98 Netmastercost=   14760.00 (Lop Pop Sop)=    64     0     5
+     Idle > Out   6269.873    462.143
+Starting Subproblems 
+Total Recourse cost: $   8857.15  LastMastercost: $  14760.00   Combined cost: $  23617.15 Min: $  24082.98
+Mins: Combined Cost: $  23617.15 LPS: 64 0 5 Bounds: 64 5 IOCars: 120 16 IOCost: $ 6022.88 $  493.94
+Starting Master Problem with recourse cost =    8857.145 IC=  6022.875 OC=   493.944 LPB=        63 SB=         5
+    Qcost=   23377.15 Netmastercost=   14520.00 (Lop Pop Sop)=    63     0     5
+     Idle > Out   6022.875    493.944
+Starting Subproblems 
+Total Recourse cost: $   8633.61  LastMastercost: $  14520.00   Combined cost: $  23153.61 Min: $  23617.15
+Mins: Combined Cost: $  23153.61 LPS: 63 0 5 Bounds: 63 5 IOCars: 115 17 IOCost: $ 5777.52 $  526.73
+Starting Master Problem with recourse cost =    8633.607 IC=  5777.523 OC=   526.733 LPB=        62 SB=         5
+    Qcost=   22913.61 Netmastercost=   14280.00 (Lop Pop Sop)=    62     0     5
+     Idle > Out   5777.523    526.733
+Starting Subproblems 
+Total Recourse cost: $   8412.57  LastMastercost: $  14280.00   Combined cost: $  22692.57 Min: $  23153.61
+Mins: Combined Cost: $  22692.57 LPS: 62 0 5 Bounds: 62 5 IOCars: 110 18 IOCost: $ 5533.96 $  560.59
+Starting Master Problem with recourse cost =    8412.574 IC=  5533.959 OC=   560.595 LPB=        61 SB=         5
+    Qcost=   22452.57 Netmastercost=   14040.00 (Lop Pop Sop)=    61     0     5
+     Idle > Out   5533.959    560.595
+Starting Subproblems 
+Total Recourse cost: $   8194.29  LastMastercost: $  14040.00   Combined cost: $  22234.29 Min: $  22692.57
+Mins: Combined Cost: $  22234.29 LPS: 61 0 5 Bounds: 61 5 IOCars: 105 19 IOCost: $ 5292.36 $  595.64
+Starting Master Problem with recourse cost =    8194.294 IC=  5292.364 OC=   595.638 LPB=        60 SB=         5
+    Qcost=   21994.29 Netmastercost=   13800.00 (Lop Pop Sop)=    60     0     5
+     Idle > Out   5292.364    595.638
+Starting Subproblems 
+Total Recourse cost: $   7979.06  LastMastercost: $  13800.00   Combined cost: $  21779.06 Min: $  22234.29
+Mins: Combined Cost: $  21779.06 LPS: 60 0 5 Bounds: 60 5 IOCars: 101 21 IOCost: $ 5052.94 $  631.99
+Starting Master Problem with recourse cost =    7979.056 IC=  5052.943 OC=   631.985 LPB=        59 SB=         5
+    Qcost=   21539.06 Netmastercost=   13560.00 (Lop Pop Sop)=    59     0     5
+     Idle > Out   5052.943    631.985
+Starting Subproblems 
+Total Recourse cost: $   7767.18  LastMastercost: $  13560.00   Combined cost: $  21327.18 Min: $  21779.06
+Mins: Combined Cost: $  21327.18 LPS: 59 0 5 Bounds: 59 5 IOCars: 96 22 IOCost: $ 4815.92 $  669.77
+Starting Master Problem with recourse cost =    7767.179 IC=  4815.924 OC=   669.774 LPB=        58 SB=         5
+    Qcost=   21087.18 Netmastercost=   13320.00 (Lop Pop Sop)=    58     0     5
+     Idle > Out   4815.924    669.774
+Starting Subproblems 
+Total Recourse cost: $   7559.00  LastMastercost: $  13320.00   Combined cost: $  20879.00 Min: $  21327.18
+Mins: Combined Cost: $  20879.00 LPS: 58 0 5 Bounds: 58 5 IOCars: 91 23 IOCost: $ 4581.55 $  709.15
+Starting Master Problem with recourse cost =    7559.005 IC=  4581.552 OC=   709.150 LPB=        57 SB=         5
+    Qcost=   20639.00 Netmastercost=   13080.00 (Lop Pop Sop)=    57     0     5
+     Idle > Out   4581.552    709.150
+Starting Subproblems 
+Total Recourse cost: $   7354.89  LastMastercost: $  13080.00   Combined cost: $  20434.89 Min: $  20879.00
+Mins: Combined Cost: $  20434.89 LPS: 57 0 5 Bounds: 57 5 IOCars: 87 25 IOCost: $ 4350.08 $  750.27
+Starting Master Problem with recourse cost =    7354.889 IC=  4350.079 OC=   750.267 LPB=        56 SB=         5
+    Qcost=   20194.89 Netmastercost=   12840.00 (Lop Pop Sop)=    56     0     5
+     Idle > Out   4350.079    750.267
+Starting Subproblems 
+Total Recourse cost: $   7155.20  LastMastercost: $  12840.00   Combined cost: $  19995.20 Min: $  20434.89
+Mins: Combined Cost: $  19995.20 LPS: 56 0 5 Bounds: 56 5 IOCars: 82 26 IOCost: $ 4121.77 $  793.28
+Starting Master Problem with recourse cost =    7155.196 IC=  4121.769 OC=   793.280 LPB=        55 SB=         5
+    Qcost=   19755.20 Netmastercost=   12600.00 (Lop Pop Sop)=    55     0     5
+     Idle > Out   4121.769    793.280
+Starting Subproblems 
+Total Recourse cost: $   6960.30  LastMastercost: $  12600.00   Combined cost: $  19560.30 Min: $  19995.20
+Mins: Combined Cost: $  19560.30 LPS: 55 0 5 Bounds: 55 5 IOCars: 77 27 IOCost: $ 3896.89 $  838.35
+Starting Master Problem with recourse cost =    6960.299 IC=  3896.885 OC=   838.350 LPB=        54 SB=         5
+    Qcost=   19320.30 Netmastercost=   12360.00 (Lop Pop Sop)=    54     0     5
+     Idle > Out   3896.885    838.350
+Starting Subproblems 
+Total Recourse cost: $   6770.61  LastMastercost: $  12360.00   Combined cost: $  19130.61 Min: $  19560.30
+Mins: Combined Cost: $  19130.61 LPS: 54 0 5 Bounds: 54 5 IOCars: 73 29 IOCost: $ 3675.70 $  885.64
+Starting Master Problem with recourse cost =    6770.608 IC=  3675.699 OC=   885.639 LPB=        53 SB=         5
+    Qcost=   18890.61 Netmastercost=   12120.00 (Lop Pop Sop)=    53     0     5
+     Idle > Out   3675.699    885.639
+Starting Subproblems 
+Total Recourse cost: $   6586.48  LastMastercost: $  12120.00   Combined cost: $  18706.48 Min: $  19130.61
+Mins: Combined Cost: $  18706.48 LPS: 53 0 5 Bounds: 53 5 IOCars: 69 31 IOCost: $ 3458.49 $  935.31
+Starting Master Problem with recourse cost =    6586.479 IC=  3458.488 OC=   935.312 LPB=        52 SB=         5
+    Qcost=   18466.48 Netmastercost=   11880.00 (Lop Pop Sop)=    52     0     5
+     Idle > Out   3458.488    935.312
+Starting Subproblems 
+Total Recourse cost: $   6408.32  LastMastercost: $  11880.00   Combined cost: $  18288.32 Min: $  18706.48
+Mins: Combined Cost: $  18288.32 LPS: 52 0 5 Bounds: 52 5 IOCars: 64 32 IOCost: $ 3245.54 $  987.54
+Starting Master Problem with recourse cost =    6408.318 IC=  3245.541 OC=   987.543 LPB=        51 SB=         5
+    Qcost=   18048.32 Netmastercost=   11640.00 (Lop Pop Sop)=    51     0     5
+     Idle > Out   3245.541    987.543
+Starting Subproblems 
+Total Recourse cost: $   6236.55  LastMastercost: $  11640.00   Combined cost: $  17876.55 Min: $  18288.32
+Mins: Combined Cost: $  17876.55 LPS: 51 0 5 Bounds: 51 5 IOCars: 60 34 IOCost: $ 3037.16 $ 1042.52
+Starting Master Problem with recourse cost =    6236.549 IC=  3037.161 OC=  1042.516 LPB=        50 SB=         5
+    Qcost=   17636.55 Netmastercost=   11400.00 (Lop Pop Sop)=    50     0     5
+     Idle > Out   3037.161   1042.516
+Starting Subproblems 
+Total Recourse cost: $   6071.63  LastMastercost: $  11400.00   Combined cost: $  17471.63 Min: $  17876.55
+Mins: Combined Cost: $  17471.63 LPS: 50 0 5 Bounds: 50 5 IOCars: 56 36 IOCost: $ 2833.67 $ 1100.42
+Starting Master Problem with recourse cost =    6071.629 IC=  2833.674 OC=  1100.423 LPB=        49 SB=         5
+    Qcost=   17231.63 Netmastercost=   11160.00 (Lop Pop Sop)=    49     0     5
+     Idle > Out   2833.674   1100.423
+Starting Subproblems 
+Total Recourse cost: $   5914.04  LastMastercost: $  11160.00   Combined cost: $  17074.04 Min: $  17471.63
+Mins: Combined Cost: $  17074.04 LPS: 49 0 5 Bounds: 49 5 IOCars: 52 38 IOCost: $ 2635.42 $ 1161.47
+Starting Master Problem with recourse cost =    5914.039 IC=  2635.424 OC=  1161.474 LPB=        48 SB=         5
+    Qcost=   16834.04 Netmastercost=   10920.00 (Lop Pop Sop)=    48     0     5
+     Idle > Out   2635.424   1161.474
+Starting Subproblems 
+Total Recourse cost: $   5764.29  LastMastercost: $  10920.00   Combined cost: $  16684.29 Min: $  17074.04
+Mins: Combined Cost: $  16684.29 LPS: 48 0 5 Bounds: 48 5 IOCars: 48 40 IOCost: $ 2442.78 $ 1225.89
+Starting Master Problem with recourse cost =    5764.290 IC=  2442.777 OC=  1225.885 LPB=        47 SB=         5
+    Qcost=   16444.29 Netmastercost=   10680.00 (Lop Pop Sop)=    47     0     5
+     Idle > Out   2442.777   1225.885
+Starting Subproblems 
+Total Recourse cost: $   5622.91  LastMastercost: $  10680.00   Combined cost: $  16302.91 Min: $  16684.29
+Mins: Combined Cost: $  16302.91 LPS: 47 0 5 Bounds: 47 5 IOCars: 45 43 IOCost: $ 2256.11 $ 1293.88
+Starting Master Problem with recourse cost =    5622.907 IC=  2256.108 OC=  1293.884 LPB=        46 SB=         5
+    Qcost=   16062.91 Netmastercost=   10440.00 (Lop Pop Sop)=    46     0     5
+     Idle > Out   2256.108   1293.884
+Starting Subproblems 
+Total Recourse cost: $   5490.41  LastMastercost: $  10440.00   Combined cost: $  15930.41 Min: $  16302.91
+Mins: Combined Cost: $  15930.41 LPS: 46 0 5 Bounds: 46 5 IOCars: 41 45 IOCost: $ 2075.79 $ 1365.69
+Starting Master Problem with recourse cost =    5490.412 IC=  2075.788 OC=  1365.692 LPB=        45 SB=         5
+    Qcost=   15690.41 Netmastercost=   10200.00 (Lop Pop Sop)=    45     0     5
+     Idle > Out   2075.788   1365.692
+Starting Subproblems 
+Total Recourse cost: $   5367.30  LastMastercost: $  10200.00   Combined cost: $  15567.30 Min: $  15930.41
+Mins: Combined Cost: $  15567.30 LPS: 45 0 5 Bounds: 45 5 IOCars: 38 48 IOCost: $ 1902.17 $ 1441.52
+Starting Master Problem with recourse cost =    5367.299 IC=  1902.172 OC=  1441.522 LPB=        44 SB=         5
+    Qcost=   15327.30 Netmastercost=    9960.00 (Lop Pop Sop)=    44     0     5
+     Idle > Out   1902.172   1441.522
+Starting Subproblems 
+Total Recourse cost: $   5254.01  LastMastercost: $   9960.00   Combined cost: $  15214.01 Min: $  15567.30
+Mins: Combined Cost: $  15214.01 LPS: 44 0 5 Bounds: 44 5 IOCars: 34 50 IOCost: $ 1735.57 $ 1521.56
+Starting Master Problem with recourse cost =    5254.009 IC=  1735.574 OC=  1521.564 LPB=        43 SB=         5
+    Qcost=   14974.01 Netmastercost=    9720.00 (Lop Pop Sop)=    43     0     5
+     Idle > Out   1735.574   1521.564
+Starting Subproblems 
+Total Recourse cost: $   5150.90  LastMastercost: $   9720.00   Combined cost: $  14870.90 Min: $  15214.01
+Mins: Combined Cost: $  14870.90 LPS: 43 0 5 Bounds: 43 5 IOCars: 31 53 IOCost: $ 1576.25 $ 1605.97
+Starting Master Problem with recourse cost =    5150.899 IC=  1576.250 OC=  1605.969 LPB=        42 SB=         5
+    Qcost=   14630.90 Netmastercost=    9480.00 (Lop Pop Sop)=    42     0     5
+     Idle < Out   1576.250   1605.969
+Found a switch back up2, $   9480.00   42    0    5
+Starting Subproblems 
+Total Recourse cost: $   5058.23  LastMastercost: $   9480.00   Combined cost: $  14538.23 Min: $  14870.90
+Mins: Combined Cost: $  14538.23 LPS: 42 0 5 Bounds: 42 5 IOCars: 28 56 IOCost: $ 1424.38 $ 1694.85
+Starting Master Problem with recourse cost =    5058.228 IC=  1424.385 OC=  1694.850 LPB=        43 SB=         5
+    Qcost=   14778.23 Netmastercost=    9720.00 (Lop Pop Sop)=    43     0     5
+     Idle < Out   1424.385   1694.850
+Found a switch back up2, $   9720.00   43    0    5
+Starting Subproblems 
+Total Recourse cost: $   5150.90  LastMastercost: $   9720.00   Combined cost: $  14870.90 Min: $  14538.23
+Starting Master Problem with recourse cost =    5150.899 IC=  1576.250 OC=  1605.969 LPB=        44 SB=         5
+    Qcost=   15110.90 Netmastercost=    9960.00 (Lop Pop Sop)=    44     0     5
+     Idle < Out   1576.250   1605.969
+Found a switch back up2, $   9960.00   44    0    5
+Starting Subproblems 
+Total Recourse cost: $   5254.01  LastMastercost: $   9960.00   Combined cost: $  15214.01 Min: $  14538.23
+Starting Master Problem with recourse cost =    5254.009 IC=  1735.574 OC=  1521.564 LPB=        45 SB=         5
+    Qcost=   15454.01 Netmastercost=   10200.00 (Lop Pop Sop)=    45     0     5
+     Idle > Out   1735.574   1521.564
+Found a switch back down2, $  10200.00   45    0    5
+   Gonna break.  15454.009  18060.994   1735.574   1521.564   45    0    5
+Rerunning subproblem 1 with (L,P,S)= 42 0 5 : bounds are 42 5
+   q=  1 (L P S EQ EO ECQ ECO)=   42    0    5      0.07     13.07      3.42    392.05    ERcost=    765.526
+   q=  2 (L P S EQ EO ECQ ECO)=   42    0    5      0.00     38.00      0.00   1140.00    ERcost=   1510.740
+   q=  3 (L P S EQ EO ECQ ECO)=   42    0    5     12.02      0.02    600.97      0.69    ERcost=    851.965
+   q=  4 (L P S EQ EO ECQ ECO)=   42    0    5      2.19      2.69    109.51     80.71    ERcost=    539.016
+   q=  5 (L P S EQ EO ECQ ECO)=   42    0    5     12.02      0.02    600.97      0.69    ERcost=    851.965
+   q=  6 (L P S EQ EO ECQ ECO)=   42    0    5      2.19      2.69    109.51     80.71    ERcost=    539.016
+
+Total Recourse cost: $   5058.23
+
+FINAL RESULTS
+Rerunning subproblem again 2 with (L,P,S)= 42 0 5 : bounds are 42 5
+   q=  1 (L P S EQ EO ECQ ECO)=   42    0    5      0.07     13.07      3.42    392.05    ERcost=    765.526 0.20
+   q=  2 (L P S EQ EO ECQ ECO)=   42    0    5      0.00     38.00      0.00   1140.00    ERcost=   1510.740 0.30
+   q=  3 (L P S EQ EO ECQ ECO)=   42    0    5     12.02      0.02    600.97      0.69    ERcost=    851.965 0.10
+   q=  4 (L P S EQ EO ECQ ECO)=   42    0    5      2.19      2.69    109.51     80.71    ERcost=    539.016 0.15
+   q=  5 (L P S EQ EO ECQ ECO)=   42    0    5     12.02      0.02    600.97      0.69    ERcost=    851.965 0.10
+   q=  6 (L P S EQ EO ECQ ECO)=   42    0    5      2.19      2.69    109.51     80.71    ERcost=    539.016 0.15
+
+All the answers for Horizon Period 3
+Mins: Combined Cost: $  14538.23 LPS: 42 0 5 Bounds: 42 5 Recourse Cost: $   5058.23 IOCars: 28 56 IOCost: $ 1424.38 $ 1694.85
+
+END RUN for Period 3 *****************************************************
+
+Acceptable Idle Rate: 10.00% Outsource Rate: 10.00%
+
+Forecast for QTR: 4 = 200
+BEGIN RUN with Forecast 200 *****************************************************
+Starting Subproblems 
+Total Recourse cost: $  11305.84  LastMastercost: $  Infinity   Combined cost: $  Infinity Min: $  Infinity
+Mins: Combined Cost: $  Infinity LPS: 69 0 5 Bounds: 69 5 IOCars: 185 1 IOCost: $ 9270.12 $   45.59
+Starting Master Problem with recourse cost =   11305.840 IC=  9270.123 OC=    45.590 LPB=        69 SB=         5
+    Qcost=   27265.84 Netmastercost=   15960.00 (Lop Pop Sop)=    69     0     5
+     Idle > Out   9270.123     45.590
+Starting Subproblems 
+Total Recourse cost: $  11305.84  LastMastercost: $  15960.00   Combined cost: $  27265.84 Min: $  Infinity
+Mins: Combined Cost: $  27265.84 LPS: 69 0 5 Bounds: 69 5 IOCars: 185 1 IOCost: $ 9270.12 $   45.59
+Starting Master Problem with recourse cost =   11305.840 IC=  9270.123 OC=    45.590 LPB=        68 SB=         5
+    Qcost=   27025.84 Netmastercost=   15720.00 (Lop Pop Sop)=    68     0     5
+     Idle > Out   9270.123     45.590
+Starting Subproblems 
+Total Recourse cost: $  11028.22  LastMastercost: $  15720.00   Combined cost: $  26748.22 Min: $  27265.84
+Mins: Combined Cost: $  26748.22 LPS: 68 0 5 Bounds: 68 5 IOCars: 179 1 IOCost: $ 8986.12 $   55.19
+Starting Master Problem with recourse cost =   11028.217 IC=  8986.116 OC=    55.186 LPB=        67 SB=         5
+    Qcost=   26508.22 Netmastercost=   15480.00 (Lop Pop Sop)=    67     0     5
+     Idle > Out   8986.116     55.186
+Starting Subproblems 
+Total Recourse cost: $  10753.87  LastMastercost: $  15480.00   Combined cost: $  26233.87 Min: $  26748.22
+Mins: Combined Cost: $  26233.87 LPS: 67 0 5 Bounds: 67 5 IOCars: 174 2 IOCost: $ 8704.45 $   66.19
+Starting Master Problem with recourse cost =   10753.869 IC=  8704.449 OC=    66.186 LPB=        66 SB=         5
+    Qcost=   25993.87 Netmastercost=   15240.00 (Lop Pop Sop)=    66     0     5
+     Idle > Out   8704.449     66.186
+Starting Subproblems 
+Total Recourse cost: $  10482.97  LastMastercost: $  15240.00   Combined cost: $  25722.97 Min: $  26233.87
+Mins: Combined Cost: $  25722.97 LPS: 66 0 5 Bounds: 66 5 IOCars: 168 2 IOCost: $ 8425.24 $   78.66
+Starting Master Problem with recourse cost =   10482.965 IC=  8425.244 OC=    78.663 LPB=        65 SB=         5
+    Qcost=   25482.97 Netmastercost=   15000.00 (Lop Pop Sop)=    65     0     5
+     Idle > Out   8425.244     78.663
+Starting Subproblems 
+Total Recourse cost: $  10215.63  LastMastercost: $  15000.00   Combined cost: $  25215.63 Min: $  25722.97
+Mins: Combined Cost: $  25215.63 LPS: 65 0 5 Bounds: 65 5 IOCars: 162 3 IOCost: $ 8148.59 $   92.67
+Starting Master Problem with recourse cost =   10215.633 IC=  8148.591 OC=    92.671 LPB=        64 SB=         5
+    Qcost=   24975.63 Netmastercost=   14760.00 (Lop Pop Sop)=    64     0     5
+     Idle > Out   8148.591     92.671
+Starting Subproblems 
+Total Recourse cost: $   9951.95  LastMastercost: $  14760.00   Combined cost: $  24711.95 Min: $  25215.63
+Mins: Combined Cost: $  24711.95 LPS: 64 0 5 Bounds: 64 5 IOCars: 157 3 IOCost: $ 7874.54 $  108.24
+Starting Master Problem with recourse cost =    9951.945 IC=  7874.543 OC=   108.243 LPB=        63 SB=         5
+    Qcost=   24471.95 Netmastercost=   14520.00 (Lop Pop Sop)=    63     0     5
+     Idle > Out   7874.543    108.243
+Starting Subproblems 
+Total Recourse cost: $   9691.93  LastMastercost: $  14520.00   Combined cost: $  24211.93 Min: $  24711.95
+Mins: Combined Cost: $  24211.93 LPS: 63 0 5 Bounds: 63 5 IOCars: 152 4 IOCost: $ 7603.12 $  125.39
+Starting Master Problem with recourse cost =    9691.928 IC=  7603.119 OC=   125.388 LPB=        62 SB=         5
+    Qcost=   23971.93 Netmastercost=   14280.00 (Lop Pop Sop)=    62     0     5
+     Idle > Out   7603.119    125.388
+Starting Subproblems 
+Total Recourse cost: $   9435.55  LastMastercost: $  14280.00   Combined cost: $  23715.55 Min: $  24211.93
+Mins: Combined Cost: $  23715.55 LPS: 62 0 5 Bounds: 62 5 IOCars: 146 4 IOCost: $ 7334.30 $  144.10
+Starting Master Problem with recourse cost =    9435.553 IC=  7334.298 OC=   144.095 LPB=        61 SB=         5
+    Qcost=   23475.55 Netmastercost=   14040.00 (Lop Pop Sop)=    61     0     5
+     Idle > Out   7334.298    144.095
+Starting Subproblems 
+Total Recourse cost: $   9182.75  LastMastercost: $  14040.00   Combined cost: $  23222.75 Min: $  23715.55
+Mins: Combined Cost: $  23222.75 LPS: 61 0 5 Bounds: 61 5 IOCars: 141 5 IOCost: $ 7068.03 $  164.33
+Starting Master Problem with recourse cost =    9182.752 IC=  7068.030 OC=   164.335 LPB=        60 SB=         5
+    Qcost=   22982.75 Netmastercost=   13800.00 (Lop Pop Sop)=    60     0     5
+     Idle > Out   7068.030    164.335
+Starting Subproblems 
+Total Recourse cost: $   8933.42  LastMastercost: $  13800.00   Combined cost: $  22733.42 Min: $  23222.75
+Mins: Combined Cost: $  22733.42 LPS: 60 0 5 Bounds: 60 5 IOCars: 136 6 IOCost: $ 6804.24 $  186.06
+Starting Master Problem with recourse cost =    8933.418 IC=  6804.241 OC=   186.061 LPB=        59 SB=         5
+    Qcost=   22493.42 Netmastercost=   13560.00 (Lop Pop Sop)=    59     0     5
+     Idle > Out   6804.241    186.061
+Starting Subproblems 
+Total Recourse cost: $   8687.42  LastMastercost: $  13560.00   Combined cost: $  22247.42 Min: $  22733.42
+Mins: Combined Cost: $  22247.42 LPS: 59 0 5 Bounds: 59 5 IOCars: 130 6 IOCost: $ 6542.84 $  209.22
+Starting Master Problem with recourse cost =    8687.423 IC=  6542.838 OC=   209.219 LPB=        58 SB=         5
+    Qcost=   22007.42 Netmastercost=   13320.00 (Lop Pop Sop)=    58     0     5
+     Idle > Out   6542.838    209.219
+Starting Subproblems 
+Total Recourse cost: $   8444.63  LastMastercost: $  13320.00   Combined cost: $  21764.63 Min: $  22247.42
+Mins: Combined Cost: $  21764.63 LPS: 58 0 5 Bounds: 58 5 IOCars: 125 7 IOCost: $ 6283.72 $  233.75
+Starting Master Problem with recourse cost =    8444.628 IC=  6283.722 OC=   233.750 LPB=        57 SB=         5
+    Qcost=   21524.63 Netmastercost=   13080.00 (Lop Pop Sop)=    57     0     5
+     Idle > Out   6283.722    233.750
+Starting Subproblems 
+Total Recourse cost: $   8204.91  LastMastercost: $  13080.00   Combined cost: $  21284.91 Min: $  21764.63
+Mins: Combined Cost: $  21284.91 LPS: 57 0 5 Bounds: 57 5 IOCars: 120 8 IOCost: $ 6026.80 $  259.60
+Starting Master Problem with recourse cost =    8204.906 IC=  6026.802 OC=   259.598 LPB=        56 SB=         5
+    Qcost=   21044.91 Netmastercost=   12840.00 (Lop Pop Sop)=    56     0     5
+     Idle > Out   6026.802    259.598
+Starting Subproblems 
+Total Recourse cost: $   7968.15  LastMastercost: $  12840.00   Combined cost: $  20808.15 Min: $  21284.91
+Mins: Combined Cost: $  20808.15 LPS: 56 0 5 Bounds: 56 5 IOCars: 115 9 IOCost: $ 5772.00 $  286.72
+Starting Master Problem with recourse cost =    7968.151 IC=  5772.003 OC=   286.718 LPB=        55 SB=         5
+    Qcost=   20568.15 Netmastercost=   12600.00 (Lop Pop Sop)=    55     0     5
+     Idle > Out   5772.003    286.718
+Starting Subproblems 
+Total Recourse cost: $   7734.30  LastMastercost: $  12600.00   Combined cost: $  20334.30 Min: $  20808.15
+Mins: Combined Cost: $  20334.30 LPS: 55 0 5 Bounds: 55 5 IOCars: 110 10 IOCost: $ 5519.28 $  315.08
+Starting Master Problem with recourse cost =    7734.301 IC=  5519.281 OC=   315.085 LPB=        54 SB=         5
+    Qcost=   20094.30 Netmastercost=   12360.00 (Lop Pop Sop)=    54     0     5
+     Idle > Out   5519.281    315.085
+Starting Subproblems 
+Total Recourse cost: $   7503.37  LastMastercost: $  12360.00   Combined cost: $  19863.37 Min: $  20334.30
+Mins: Combined Cost: $  19863.37 LPS: 54 0 5 Bounds: 54 5 IOCars: 105 11 IOCost: $ 5268.63 $  344.69
+Starting Master Problem with recourse cost =    7503.369 IC=  5268.629 OC=   344.694 LPB=        53 SB=         5
+    Qcost=   19623.37 Netmastercost=   12120.00 (Lop Pop Sop)=    53     0     5
+     Idle > Out   5268.629    344.694
+Starting Subproblems 
+Total Recourse cost: $   7275.39  LastMastercost: $  12120.00   Combined cost: $  19395.39 Min: $  19863.37
+Mins: Combined Cost: $  19395.39 LPS: 53 0 5 Bounds: 53 5 IOCars: 100 12 IOCost: $ 5020.09 $  375.57
+Starting Master Problem with recourse cost =    7275.395 IC=  5020.090 OC=   375.571 LPB=        52 SB=         5
+    Qcost=   19155.39 Netmastercost=   11880.00 (Lop Pop Sop)=    52     0     5
+     Idle > Out   5020.090    375.571
+Starting Subproblems 
+Total Recourse cost: $   7050.51  LastMastercost: $  11880.00   Combined cost: $  18930.51 Min: $  19395.39
+Mins: Combined Cost: $  18930.51 LPS: 52 0 5 Bounds: 52 5 IOCars: 95 13 IOCost: $ 4773.76 $  407.77
+Starting Master Problem with recourse cost =    7050.510 IC=  4773.759 OC=   407.772 LPB=        51 SB=         5
+    Qcost=   18690.51 Netmastercost=   11640.00 (Lop Pop Sop)=    51     0     5
+     Idle > Out   4773.759    407.772
+Starting Subproblems 
+Total Recourse cost: $   6828.92  LastMastercost: $  11640.00   Combined cost: $  18468.92 Min: $  18930.51
+Mins: Combined Cost: $  18468.92 LPS: 51 0 5 Bounds: 51 5 IOCars: 90 14 IOCost: $ 4529.79 $  441.39
+Starting Master Problem with recourse cost =    6828.924 IC=  4529.785 OC=   441.388 LPB=        50 SB=         5
+    Qcost=   18228.92 Netmastercost=   11400.00 (Lop Pop Sop)=    50     0     5
+     Idle > Out   4529.785    441.388
+Starting Subproblems 
+Total Recourse cost: $   6610.92  LastMastercost: $  11400.00   Combined cost: $  18010.92 Min: $  18468.92
+Mins: Combined Cost: $  18010.92 LPS: 50 0 5 Bounds: 50 5 IOCars: 85 15 IOCost: $ 4288.37 $  476.54
+Starting Master Problem with recourse cost =    6610.918 IC=  4288.369 OC=   476.538 LPB=        49 SB=         5
+    Qcost=   17770.92 Netmastercost=   11160.00 (Lop Pop Sop)=    49     0     5
+     Idle > Out   4288.369    476.538
+Starting Subproblems 
+Total Recourse cost: $   6396.85  LastMastercost: $  11160.00   Combined cost: $  17556.85 Min: $  18010.92
+Mins: Combined Cost: $  17556.85 LPS: 49 0 5 Bounds: 49 5 IOCars: 80 17 IOCost: $ 4049.76 $  513.37
+Starting Master Problem with recourse cost =    6396.845 IC=  4049.763 OC=   513.374 LPB=        48 SB=         5
+    Qcost=   17316.85 Netmastercost=   10920.00 (Lop Pop Sop)=    48     0     5
+     Idle > Out   4049.763    513.374
+Starting Subproblems 
+Total Recourse cost: $   6187.12  LastMastercost: $  10920.00   Combined cost: $  17107.12 Min: $  17556.85
+Mins: Combined Cost: $  17107.12 LPS: 48 0 5 Bounds: 48 5 IOCars: 76 18 IOCost: $ 3814.26 $  552.07
+Starting Master Problem with recourse cost =    6187.118 IC=  3814.263 OC=   552.074 LPB=        47 SB=         5
+    Qcost=   16867.12 Netmastercost=   10680.00 (Lop Pop Sop)=    47     0     5
+     Idle > Out   3814.263    552.074
+Starting Subproblems 
+Total Recourse cost: $   5982.20  LastMastercost: $  10680.00   Combined cost: $  16662.20 Min: $  17107.12
+Mins: Combined Cost: $  16662.20 LPS: 47 0 5 Bounds: 47 5 IOCars: 71 19 IOCost: $ 3582.20 $  592.84
+Starting Master Problem with recourse cost =    5982.204 IC=  3582.200 OC=   592.837 LPB=        46 SB=         5
+    Qcost=   16422.20 Netmastercost=   10440.00 (Lop Pop Sop)=    46     0     5
+     Idle > Out   3582.200    592.837
+Starting Subproblems 
+Total Recourse cost: $   5782.61  LastMastercost: $  10440.00   Combined cost: $  16222.61 Min: $  16662.20
+Mins: Combined Cost: $  16222.61 LPS: 46 0 5 Bounds: 46 5 IOCars: 67 21 IOCost: $ 3353.94 $  635.88
+Starting Master Problem with recourse cost =    5782.613 IC=  3353.942 OC=   635.881 LPB=        45 SB=         5
+    Qcost=   15982.61 Netmastercost=   10200.00 (Lop Pop Sop)=    45     0     5
+     Idle > Out   3353.942    635.881
+Starting Subproblems 
+Total Recourse cost: $   5588.90  LastMastercost: $  10200.00   Combined cost: $  15788.90 Min: $  16222.61
+Mins: Combined Cost: $  15788.90 LPS: 45 0 5 Bounds: 45 5 IOCars: 62 22 IOCost: $ 3129.88 $  681.44
+Starting Master Problem with recourse cost =    5588.896 IC=  3129.880 OC=   681.444 LPB=        44 SB=         5
+    Qcost=   15548.90 Netmastercost=    9960.00 (Lop Pop Sop)=    44     0     5
+     Idle > Out   3129.880    681.444
+Starting Subproblems 
+Total Recourse cost: $   5401.64  LastMastercost: $   9960.00   Combined cost: $  15361.64 Min: $  15788.90
+Mins: Combined Cost: $  15361.64 LPS: 44 0 5 Bounds: 44 5 IOCars: 58 24 IOCost: $ 2910.43 $  729.78
+Starting Master Problem with recourse cost =    5401.641 IC=  2910.435 OC=   729.777 LPB=        43 SB=         5
+    Qcost=   15121.64 Netmastercost=    9720.00 (Lop Pop Sop)=    43     0     5
+     Idle > Out   2910.435    729.777
+Starting Subproblems 
+Total Recourse cost: $   5221.47  LastMastercost: $   9720.00   Combined cost: $  14941.47 Min: $  15361.64
+Mins: Combined Cost: $  14941.47 LPS: 43 0 5 Bounds: 43 5 IOCars: 53 26 IOCost: $ 2696.05 $  781.15
+Starting Master Problem with recourse cost =    5221.467 IC=  2696.049 OC=   781.146 LPB=        42 SB=         5
+    Qcost=   14701.47 Netmastercost=    9480.00 (Lop Pop Sop)=    42     0     5
+     Idle > Out   2696.049    781.146
+Starting Subproblems 
+Total Recourse cost: $   5049.03  LastMastercost: $   9480.00   Combined cost: $  14529.03 Min: $  14941.47
+Mins: Combined Cost: $  14529.03 LPS: 42 0 5 Bounds: 42 5 IOCars: 49 27 IOCost: $ 2487.19 $  835.83
+Starting Master Problem with recourse cost =    5049.030 IC=  2487.191 OC=   835.831 LPB=        41 SB=         5
+    Qcost=   14289.03 Netmastercost=    9240.00 (Lop Pop Sop)=    41     0     5
+     Idle > Out   2487.191    835.831
+Starting Subproblems 
+Total Recourse cost: $   4885.01  LastMastercost: $   9240.00   Combined cost: $  14125.01 Min: $  14529.03
+Mins: Combined Cost: $  14125.01 LPS: 41 0 5 Bounds: 41 5 IOCars: 45 29 IOCost: $ 2284.35 $  894.13
+Starting Master Problem with recourse cost =    4885.014 IC=  2284.351 OC=   894.127 LPB=        40 SB=         5
+    Qcost=   13885.01 Netmastercost=    9000.00 (Lop Pop Sop)=    40     0     5
+     Idle > Out   2284.351    894.127
+Starting Subproblems 
+Total Recourse cost: $   4730.13  LastMastercost: $   9000.00   Combined cost: $  13730.13 Min: $  14125.01
+Mins: Combined Cost: $  13730.13 LPS: 40 0 5 Bounds: 40 5 IOCars: 41 31 IOCost: $ 2088.03 $  956.34
+Starting Master Problem with recourse cost =    4730.127 IC=  2088.032 OC=   956.336 LPB=        39 SB=         5
+    Qcost=   13490.13 Netmastercost=    8760.00 (Lop Pop Sop)=    39     0     5
+     Idle > Out   2088.032    956.336
+Starting Subproblems 
+Total Recourse cost: $   4585.08  LastMastercost: $   8760.00   Combined cost: $  13345.08 Min: $  13730.13
+Mins: Combined Cost: $  13345.08 LPS: 39 0 5 Bounds: 39 5 IOCars: 37 34 IOCost: $ 1898.75 $ 1022.77
+Starting Master Problem with recourse cost =    4585.084 IC=  1898.748 OC=  1022.765 LPB=        38 SB=         5
+    Qcost=   13105.08 Netmastercost=    8520.00 (Lop Pop Sop)=    38     0     5
+     Idle > Out   1898.748   1022.765
+Starting Subproblems 
+Total Recourse cost: $   4450.59  LastMastercost: $   8520.00   Combined cost: $  12970.59 Min: $  13345.08
+Mins: Combined Cost: $  12970.59 LPS: 38 0 5 Bounds: 38 5 IOCars: 34 36 IOCost: $ 1717.00 $ 1093.72
+Starting Master Problem with recourse cost =    4450.587 IC=  1716.998 OC=  1093.715 LPB=        37 SB=         5
+    Qcost=   12730.59 Netmastercost=    8280.00 (Lop Pop Sop)=    37     0     5
+     Idle > Out   1716.998   1093.715
+Starting Subproblems 
+Total Recourse cost: $   4327.29  LastMastercost: $   8280.00   Combined cost: $  12607.29 Min: $  12970.59
+Mins: Combined Cost: $  12607.29 LPS: 37 0 5 Bounds: 37 5 IOCars: 30 38 IOCost: $ 1543.25 $ 1169.47
+Starting Master Problem with recourse cost =    4327.291 IC=  1543.252 OC=  1169.467 LPB=        36 SB=         5
+    Qcost=   12367.29 Netmastercost=    8040.00 (Lop Pop Sop)=    36     0     5
+     Idle > Out   1543.252   1169.467
+Starting Subproblems 
+Total Recourse cost: $   4215.78  LastMastercost: $   8040.00   Combined cost: $  12255.78 Min: $  12607.29
+Mins: Combined Cost: $  12255.78 LPS: 36 0 5 Bounds: 36 5 IOCars: 27 41 IOCost: $ 1377.92 $ 1250.27
+Starting Master Problem with recourse cost =    4215.778 IC=  1377.923 OC=  1250.270 LPB=        35 SB=         5
+    Qcost=   12015.78 Netmastercost=    7800.00 (Lop Pop Sop)=    35     0     5
+     Idle > Out   1377.923   1250.270
+Starting Subproblems 
+Total Recourse cost: $   4116.53  LastMastercost: $   7800.00   Combined cost: $  11916.53 Min: $  12255.78
+Mins: Combined Cost: $  11916.53 LPS: 35 0 5 Bounds: 35 5 IOCars: 24 44 IOCost: $ 1221.36 $ 1336.33
+Starting Master Problem with recourse cost =    4116.528 IC=  1221.357 OC=  1336.331 LPB=        34 SB=         5
+    Qcost=   11676.53 Netmastercost=    7560.00 (Lop Pop Sop)=    34     0     5
+     Idle < Out   1221.357   1336.331
+Found a switch back up2, $   7560.00   34    0    5
+Starting Subproblems 
+Total Recourse cost: $   4029.91  LastMastercost: $   7560.00   Combined cost: $  11589.91 Min: $  11916.53
+Mins: Combined Cost: $  11589.91 LPS: 34 0 5 Bounds: 34 5 IOCars: 21 47 IOCost: $ 1073.82 $ 1427.81
+Starting Master Problem with recourse cost =    4029.911 IC=  1073.817 OC=  1427.807 LPB=        35 SB=         5
+    Qcost=   11829.91 Netmastercost=    7800.00 (Lop Pop Sop)=    35     0     5
+     Idle < Out   1073.817   1427.807
+Found a switch back up2, $   7800.00   35    0    5
+Starting Subproblems 
+Total Recourse cost: $   4116.53  LastMastercost: $   7800.00   Combined cost: $  11916.53 Min: $  11589.91
+Starting Master Problem with recourse cost =    4116.528 IC=  1221.357 OC=  1336.331 LPB=        36 SB=         5
+    Qcost=   12156.53 Netmastercost=    8040.00 (Lop Pop Sop)=    36     0     5
+     Idle < Out   1221.357   1336.331
+Found a switch back up2, $   8040.00   36    0    5
+Starting Subproblems 
+Total Recourse cost: $   4215.78  LastMastercost: $   8040.00   Combined cost: $  12255.78 Min: $  11589.91
+Starting Master Problem with recourse cost =    4215.778 IC=  1377.923 OC=  1250.270 LPB=        37 SB=         5
+    Qcost=   12495.78 Netmastercost=    8280.00 (Lop Pop Sop)=    37     0     5
+     Idle > Out   1377.923   1250.270
+Found a switch back down2, $   8280.00   37    0    5
+   Gonna break.  12495.778  15454.009   1377.923   1250.270   37    0    5
+Rerunning subproblem 1 with (L,P,S)= 34 0 5 : bounds are 34 5
+   q=  1 (L P S EQ EO ECQ ECO)=   34    0    5      0.08     11.08      3.92    332.35    ERcost=    626.070
+   q=  2 (L P S EQ EO ECQ ECO)=   34    0    5      0.00     31.00      0.00    930.00    ERcost=   1220.580
+   q=  3 (L P S EQ EO ECQ ECO)=   34    0    5      9.00      0.05    449.79      1.63    ERcost=    651.857
+   q=  4 (L P S EQ EO ECQ ECO)=   34    0    5      1.70      2.70     85.16     81.10    ERcost=    439.774
+   q=  5 (L P S EQ EO ECQ ECO)=   34    0    5      9.00      0.05    449.79      1.63    ERcost=    651.857
+   q=  6 (L P S EQ EO ECQ ECO)=   34    0    5      1.70      2.70     85.16     81.10    ERcost=    439.774
+
+Total Recourse cost: $   4029.91
+
+FINAL RESULTS
+Rerunning subproblem again 2 with (L,P,S)= 34 0 5 : bounds are 34 5
+   q=  1 (L P S EQ EO ECQ ECO)=   34    0    5      0.08     11.08      3.92    332.35    ERcost=    626.070 0.20
+   q=  2 (L P S EQ EO ECQ ECO)=   34    0    5      0.00     31.00      0.00    930.00    ERcost=   1220.580 0.30
+   q=  3 (L P S EQ EO ECQ ECO)=   34    0    5      9.00      0.05    449.79      1.63    ERcost=    651.857 0.10
+   q=  4 (L P S EQ EO ECQ ECO)=   34    0    5      1.70      2.70     85.16     81.10    ERcost=    439.774 0.15
+   q=  5 (L P S EQ EO ECQ ECO)=   34    0    5      9.00      0.05    449.79      1.63    ERcost=    651.857 0.10
+   q=  6 (L P S EQ EO ECQ ECO)=   34    0    5      1.70      2.70     85.16     81.10    ERcost=    439.774 0.15
+
+All the answers for Horizon Period 4
+Mins: Combined Cost: $  11589.91 LPS: 34 0 5 Bounds: 34 5 Recourse Cost: $   4029.91 IOCars: 21 47 IOCost: $ 1073.82 $ 1427.81
+
+END RUN for Period 4 *****************************************************
+
+Acceptable Idle Rate: 10.00% Outsource Rate: 10.00%
+
+Forecast for QTR: 5 = 325
+BEGIN RUN with Forecast 325 *****************************************************
+Starting Subproblems 
+Total Recourse cost: $   8819.26  LastMastercost: $  Infinity   Combined cost: $  Infinity Min: $  Infinity
+Mins: Combined Cost: $  Infinity LPS: 69 0 5 Bounds: 69 5 IOCars: 96 37 IOCost: $ 4816.37 $ 1119.82
+Starting Master Problem with recourse cost =    8819.261 IC=  4816.367 OC=  1119.821 LPB=        69 SB=         5
+    Qcost=   24779.26 Netmastercost=   15960.00 (Lop Pop Sop)=    69     0     5
+     Idle > Out   4816.367   1119.821
+Starting Subproblems 
+Total Recourse cost: $   8819.26  LastMastercost: $  15960.00   Combined cost: $  24779.26 Min: $  Infinity
+Mins: Combined Cost: $  24779.26 LPS: 69 0 5 Bounds: 69 5 IOCars: 96 37 IOCost: $ 4816.37 $ 1119.82
+Starting Master Problem with recourse cost =    8819.261 IC=  4816.367 OC=  1119.821 LPB=        68 SB=         5
+    Qcost=   24539.26 Netmastercost=   15720.00 (Lop Pop Sop)=    68     0     5
+     Idle > Out   4816.367   1119.821
+Starting Subproblems 
+Total Recourse cost: $   8631.69  LastMastercost: $  15720.00   Combined cost: $  24351.69 Min: $  24779.26
+Mins: Combined Cost: $  24351.69 LPS: 68 0 5 Bounds: 68 5 IOCars: 91 38 IOCost: $ 4596.72 $ 1168.03
+Starting Master Problem with recourse cost =    8631.694 IC=  4596.722 OC=  1168.034 LPB=        67 SB=         5
+    Qcost=   24111.69 Netmastercost=   15480.00 (Lop Pop Sop)=    67     0     5
+     Idle > Out   4596.722   1168.034
+Starting Subproblems 
+Total Recourse cost: $   8448.58  LastMastercost: $  15480.00   Combined cost: $  23928.58 Min: $  24351.69
+Mins: Combined Cost: $  23928.58 LPS: 67 0 5 Bounds: 67 5 IOCars: 87 40 IOCost: $ 4380.26 $ 1218.16
+Starting Master Problem with recourse cost =    8448.580 IC=  4380.259 OC=  1218.157 LPB=        66 SB=         5
+    Qcost=   23688.58 Netmastercost=   15240.00 (Lop Pop Sop)=    66     0     5
+     Idle > Out   4380.259   1218.157
+Starting Subproblems 
+Total Recourse cost: $   8270.12  LastMastercost: $  15240.00   Combined cost: $  23510.12 Min: $  23928.58
+Mins: Combined Cost: $  23510.12 LPS: 66 0 5 Bounds: 66 5 IOCars: 83 42 IOCost: $ 4167.12 $ 1270.27
+Starting Master Problem with recourse cost =    8270.118 IC=  4167.122 OC=  1270.274 LPB=        65 SB=         5
+    Qcost=   23270.12 Netmastercost=   15000.00 (Lop Pop Sop)=    65     0     5
+     Idle > Out   4167.122   1270.274
+Starting Subproblems 
+Total Recourse cost: $   8096.52  LastMastercost: $  15000.00   Combined cost: $  23096.52 Min: $  23510.12
+Mins: Combined Cost: $  23096.52 LPS: 65 0 5 Bounds: 65 5 IOCars: 79 44 IOCost: $ 3957.46 $ 1324.48
+Starting Master Problem with recourse cost =    8096.522 IC=  3957.462 OC=  1324.478 LPB=        64 SB=         5
+    Qcost=   22856.52 Netmastercost=   14760.00 (Lop Pop Sop)=    64     0     5
+     Idle > Out   3957.462   1324.478
+Starting Subproblems 
+Total Recourse cost: $   7928.03  LastMastercost: $  14760.00   Combined cost: $  22688.03 Min: $  23096.52
+Mins: Combined Cost: $  22688.03 LPS: 64 0 5 Bounds: 64 5 IOCars: 75 46 IOCost: $ 3751.45 $ 1380.87
+Starting Master Problem with recourse cost =    7928.031 IC=  3751.451 OC=  1380.872 LPB=        63 SB=         5
+    Qcost=   22448.03 Netmastercost=   14520.00 (Lop Pop Sop)=    63     0     5
+     Idle > Out   3751.451   1380.872
+Starting Subproblems 
+Total Recourse cost: $   7764.91  LastMastercost: $  14520.00   Combined cost: $  22284.91 Min: $  22688.03
+Mins: Combined Cost: $  22284.91 LPS: 63 0 5 Bounds: 63 5 IOCars: 70 47 IOCost: $ 3549.28 $ 1439.57
+Starting Master Problem with recourse cost =    7764.914 IC=  3549.280 OC=  1439.569 LPB=        62 SB=         5
+    Qcost=   22044.91 Netmastercost=   14280.00 (Lop Pop Sop)=    62     0     5
+     Idle > Out   3549.280   1439.569
+Starting Subproblems 
+Total Recourse cost: $   7607.48  LastMastercost: $  14280.00   Combined cost: $  21887.48 Min: $  22284.91
+Mins: Combined Cost: $  21887.48 LPS: 62 0 5 Bounds: 62 5 IOCars: 67 50 IOCost: $ 3351.17 $ 1500.70
+Starting Master Problem with recourse cost =    7607.475 IC=  3351.168 OC=  1500.702 LPB=        61 SB=         5
+    Qcost=   21647.48 Netmastercost=   14040.00 (Lop Pop Sop)=    61     0     5
+     Idle > Out   3351.168   1500.702
+Starting Subproblems 
+Total Recourse cost: $   7456.06  LastMastercost: $  14040.00   Combined cost: $  21496.06 Min: $  21887.48
+Mins: Combined Cost: $  21496.06 LPS: 61 0 5 Bounds: 61 5 IOCars: 63 52 IOCost: $ 3157.36 $ 1564.42
+Starting Master Problem with recourse cost =    7456.058 IC=  3157.359 OC=  1564.417 LPB=        60 SB=         5
+    Qcost=   21256.06 Netmastercost=   13800.00 (Lop Pop Sop)=    60     0     5
+     Idle > Out   3157.359   1564.417
+Starting Subproblems 
+Total Recourse cost: $   7311.04  LastMastercost: $  13800.00   Combined cost: $  21111.04 Min: $  21496.06
+Mins: Combined Cost: $  21111.04 LPS: 60 0 5 Bounds: 60 5 IOCars: 59 54 IOCost: $ 2968.12 $ 1630.87
+Starting Master Problem with recourse cost =    7311.039 IC=  2968.123 OC=  1630.875 LPB=        59 SB=         5
+    Qcost=   20871.04 Netmastercost=   13560.00 (Lop Pop Sop)=    59     0     5
+     Idle > Out   2968.123   1630.875
+Starting Subproblems 
+Total Recourse cost: $   7172.82  LastMastercost: $  13560.00   Combined cost: $  20732.82 Min: $  21111.04
+Mins: Combined Cost: $  20732.82 LPS: 59 0 5 Bounds: 59 5 IOCars: 55 56 IOCost: $ 2783.74 $ 1700.25
+Starting Master Problem with recourse cost =    7172.815 IC=  2783.744 OC=  1700.247 LPB=        58 SB=         5
+    Qcost=   20492.82 Netmastercost=   13320.00 (Lop Pop Sop)=    58     0     5
+     Idle > Out   2783.744   1700.247
+Starting Subproblems 
+Total Recourse cost: $   7041.80  LastMastercost: $  13320.00   Combined cost: $  20361.80 Min: $  20732.82
+Mins: Combined Cost: $  20361.80 LPS: 58 0 5 Bounds: 58 5 IOCars: 52 59 IOCost: $ 2604.51 $ 1772.71
+Starting Master Problem with recourse cost =    7041.796 IC=  2604.513 OC=  1772.709 LPB=        57 SB=         5
+    Qcost=   20121.80 Netmastercost=   13080.00 (Lop Pop Sop)=    57     0     5
+     Idle > Out   2604.513   1772.709
+Starting Subproblems 
+Total Recourse cost: $   6918.38  LastMastercost: $  13080.00   Combined cost: $  19998.38 Min: $  20361.80
+Mins: Combined Cost: $  19998.38 LPS: 57 0 5 Bounds: 57 5 IOCars: 48 61 IOCost: $ 2430.71 $ 1848.43
+Starting Master Problem with recourse cost =    6918.378 IC=  2430.715 OC=  1848.430 LPB=        56 SB=         5
+    Qcost=   19758.38 Netmastercost=   12840.00 (Lop Pop Sop)=    56     0     5
+     Idle > Out   2430.715   1848.430
+Starting Subproblems 
+Total Recourse cost: $   6802.92  LastMastercost: $  12840.00   Combined cost: $  19642.92 Min: $  19998.38
+Mins: Combined Cost: $  19642.92 LPS: 56 0 5 Bounds: 56 5 IOCars: 45 64 IOCost: $ 2262.61 $ 1927.57
+Starting Master Problem with recourse cost =    6802.922 IC=  2262.607 OC=  1927.566 LPB=        55 SB=         5
+    Qcost=   19402.92 Netmastercost=   12600.00 (Lop Pop Sop)=    55     0     5
+     Idle > Out   2262.607   1927.566
+Starting Subproblems 
+Total Recourse cost: $   6695.73  LastMastercost: $  12600.00   Combined cost: $  19295.73 Min: $  19642.92
+Mins: Combined Cost: $  19295.73 LPS: 55 0 5 Bounds: 55 5 IOCars: 42 67 IOCost: $ 2100.41 $ 2010.25
+Starting Master Problem with recourse cost =    6695.734 IC=  2100.409 OC=  2010.247 LPB=        54 SB=         5
+    Qcost=   19055.73 Netmastercost=   12360.00 (Lop Pop Sop)=    54     0     5
+     Idle > Out   2100.409   2010.247
+Starting Subproblems 
+Total Recourse cost: $   6597.10  LastMastercost: $  12360.00   Combined cost: $  18957.10 Min: $  19295.73
+Mins: Combined Cost: $  18957.10 LPS: 54 0 5 Bounds: 54 5 IOCars: 38 69 IOCost: $ 1944.28 $ 2096.57
+Starting Master Problem with recourse cost =    6597.099 IC=  1944.282 OC=  2096.571 LPB=        53 SB=         5
+    Qcost=   18717.10 Netmastercost=   12120.00 (Lop Pop Sop)=    53     0     5
+     Idle < Out   1944.282   2096.571
+Found a switch back up2, $  12120.00   53    0    5
+Starting Subproblems 
+Total Recourse cost: $   6507.10  LastMastercost: $  12120.00   Combined cost: $  18627.10 Min: $  18957.10
+Mins: Combined Cost: $  18627.10 LPS: 53 0 5 Bounds: 53 5 IOCars: 35 72 IOCost: $ 1794.32 $ 2186.60
+Starting Master Problem with recourse cost =    6507.098 IC=  1794.324 OC=  2186.596 LPB=        54 SB=         5
+    Qcost=   18867.10 Netmastercost=   12360.00 (Lop Pop Sop)=    54     0     5
+     Idle < Out   1794.324   2186.596
+Found a switch back up2, $  12360.00   54    0    5
+Starting Subproblems 
+Total Recourse cost: $   6597.10  LastMastercost: $  12360.00   Combined cost: $  18957.10 Min: $  18627.10
+Starting Master Problem with recourse cost =    6597.099 IC=  1944.282 OC=  2096.571 LPB=        55 SB=         5
+    Qcost=   19197.10 Netmastercost=   12600.00 (Lop Pop Sop)=    55     0     5
+     Idle < Out   1944.282   2096.571
+Found a switch back up2, $  12600.00   55    0    5
+Starting Subproblems 
+Total Recourse cost: $   6695.73  LastMastercost: $  12600.00   Combined cost: $  19295.73 Min: $  18627.10
+Starting Master Problem with recourse cost =    6695.734 IC=  2100.409 OC=  2010.247 LPB=        56 SB=         5
+    Qcost=   19535.73 Netmastercost=   12840.00 (Lop Pop Sop)=    56     0     5
+     Idle > Out   2100.409   2010.247
+Found a switch back down2, $  12840.00   56    0    5
+   Gonna break.  19535.734  12495.778   2100.409   2010.247   56    0    5
+Rerunning subproblem 1 with (L,P,S)= 53 0 5 : bounds are 53 5
+   q=  1 (L P S EQ EO ECQ ECO)=   53    0    5      0.04     17.04      1.79    511.08    ERcost=    993.469
+   q=  2 (L P S EQ EO ECQ ECO)=   53    0    5      0.00     49.50      0.00   1485.00    ERcost=   1965.959
+   q=  3 (L P S EQ EO ECQ ECO)=   53    0    5     15.51      0.01    775.53      0.32    ERcost=   1101.399
+   q=  4 (L P S EQ EO ECQ ECO)=   53    0    5      2.41      3.16    120.73     94.94    ERcost=    672.435
+   q=  5 (L P S EQ EO ECQ ECO)=   53    0    5     15.51      0.01    775.53      0.32    ERcost=   1101.399
+   q=  6 (L P S EQ EO ECQ ECO)=   53    0    5      2.41      3.16    120.73     94.94    ERcost=    672.435
+
+Total Recourse cost: $   6507.10
+
+FINAL RESULTS
+Rerunning subproblem again 2 with (L,P,S)= 53 0 5 : bounds are 53 5
+   q=  1 (L P S EQ EO ECQ ECO)=   53    0    5      0.04     17.04      1.79    511.08    ERcost=    993.469 0.20
+   q=  2 (L P S EQ EO ECQ ECO)=   53    0    5      0.00     49.50      0.00   1485.00    ERcost=   1965.959 0.30
+   q=  3 (L P S EQ EO ECQ ECO)=   53    0    5     15.51      0.01    775.53      0.32    ERcost=   1101.399 0.10
+   q=  4 (L P S EQ EO ECQ ECO)=   53    0    5      2.41      3.16    120.73     94.94    ERcost=    672.435 0.15
+   q=  5 (L P S EQ EO ECQ ECO)=   53    0    5     15.51      0.01    775.53      0.32    ERcost=   1101.399 0.10
+   q=  6 (L P S EQ EO ECQ ECO)=   53    0    5      2.41      3.16    120.73     94.94    ERcost=    672.435 0.15
+
+All the answers for Horizon Period 5
+Mins: Combined Cost: $  18627.10 LPS: 53 0 5 Bounds: 53 5 Recourse Cost: $   6507.10 IOCars: 35 72 IOCost: $ 1794.32 $ 2186.60
+
+END RUN for Period 5 *****************************************************
+
+Acceptable Idle Rate: 10.00% Outsource Rate: 10.00%
+
+Cars: 65 0 5 0 Combined Cost: $  23037.71 Expected Recourse Cost: $   8037.71 
+Expected IO Cars: 46 86 Expected IO Costs: $ 2310.28 $ 2582.51
+Cars: 49 0 5 0 Combined Cost: $  17156.36 Expected Recourse Cost: $   5996.36 
+Expected IO Cars: 32 68 Expected IO Costs: $ 1622.66 $ 2053.60
+Cars: 42 0 5 0 Combined Cost: $  14538.23 Expected Recourse Cost: $   5058.23 
+Expected IO Cars: 28 56 Expected IO Costs: $ 1424.38 $ 1694.85
+Cars: 34 0 5 0 Combined Cost: $  11589.91 Expected Recourse Cost: $   4029.91 
+Expected IO Cars: 21 47 Expected IO Costs: $ 1073.82 $ 1427.81
+Cars: 53 0 5 0 Combined Cost: $  18627.10 Expected Recourse Cost: $   6507.10 
+Expected IO Cars: 35 72 Expected IO Costs: $ 1794.32 $ 2186.60
+# $4 = Expected_Outsource_Cost
+: Expected_Idle Expected_Idle_Cost Expected_Outsource     $4       :=
+1     46.2056         2310.28            86.0837        2582.51
+2     32.4531         1622.66            68.4534        2053.6
+3     28.4877         1424.38            56.495         1694.85
+4     21.4763         1073.82            47.5936        1427.81
+5     35.8865         1794.32            72.8865        2186.6
+;
+
+: Combined_Cost Expected_Recourse_Cost    :=
+1     23037.7           8037.71
+2     17156.4           5996.36
+3     14538.2           5058.23
+4     11589.9           4029.91
+5     18627.1           6507.1
+;
+
+Nocars[h,'Leased'] [*] :=
+1  65
+2  49
+3  42
+4  34
+5  53
+;
+
+Nocars[h,'Purchased'] [*] :=
+1  0
+2  0
+3  0
+4  0
+5  0
+;
+
+Nocars[h,'Subleased_L'] [*] :=
+1  5
+2  5
+3  5
+4  5
+5  5
+;
+
+Nocars[h,'Subleased_P'] [*] :=
+1  0
+2  0
+3  0
+4  0
+5  0
+;
+
